@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Github, Linkedin, Mail, Send, Twitter } from "lucide-react";
+import { Facebook, Linkedin, Mail, MessageCircle, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -21,9 +21,9 @@ const ContactSection = () => {
 
   const socialLinks = [
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Mail, href: "mailto:hello@marklester.dev", label: "Email" },
+    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
+    { icon: MessageCircle, href: "https://wa.me/yourphonenumber", label: "WhatsApp" },
+    { icon: Mail, href: "mailto:hello@marklester.dev", label: "Gmail" },
   ];
 
   return (
