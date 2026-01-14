@@ -1,34 +1,23 @@
 import { motion } from "framer-motion";
-import {
-  ArrowUpRight,
-  Bot,
-  FileText,
-  Mail,
-  MessageSquare,
-  Zap,
-} from "lucide-react";
+import { ArrowUpRight, Bot, FileText, Mail, MessageSquare, Zap } from "lucide-react";
 import { useState } from "react";
 
 const projects = [
   {
     id: 1,
-    title:
-      "Hoop Shorts — Automation AI-Powered NBA Video Clipping and Shorts Automation",
+    title: "Hoop Shorts — Automation AI-Powered NBA Video Clipping and Shorts Automation",
     description:
       "Built an AI-powered automated content system that generates optimized titles and descriptions, discovers long-form NBA videos with no existing Shorts, intelligently identifies and extracts high-impact moments, transforms them into engaging short-form videos, and automatically publishes across YouTube Shorts, Facebook Reels, and Instagram Reels.",
-    problem:
-      "High volume of repetitive customer questions overwhelming support team",
+    problem: "High volume of repetitive customer questions overwhelming support team",
     tools: ["n8n", "OpenAI", "Klap AI", "Meta", "YouTube"],
-    results:
-      "90% reduction in manual editing work, 5–10 times faster content production",
+    results: "90% reduction in manual editing work, 5–10 times faster content production",
     icon: Zap,
     category: "AI Automation",
     href: "https://www.youtube.com/@HoopShortsOfficial",
   },
   {
     id: 2,
-    title:
-      "Motivation Timepiece — AI-Powered Motivational Quote Image Generation",
+    title: "Motivation Timepiece — AI-Powered Motivational Quote Image Generation",
     description:
       "This AI-powered automated workflow creates and publishes motivational content to Facebook without manual effort. It uses AI to generate quotes from famous motivational speakers, produces matching speaker visuals, adds the quote as text overlay on the image, and automatically uploads the final post to a Facebook page.",
     problem: "Sales team wasting time on unqualified leads",
@@ -42,7 +31,7 @@ const projects = [
     id: 3,
     title: "Scarlet Eve AI — Christmas Anime Companion for AI Image Creation",
     description:
-      "A Christmas-themed anime waifu AI agent available on Telegram, designed to guide users through a cozy and magical AI image creation experience. Users can chat naturally or use simple commands to generate anime-style images filled with winter charm and holiday sparkle. It allows full customization of image results, including expressions, emotions, poses, outfits, and companions.",
+      "A Christmas-themed anime waifu AI agent available on Telegram, designed to guide users through a cozy and magical AI image creation experience. Users can chat naturally or use simple commands to generate anime-style images filled with winter charm and holiday sparkle. It allows full customization of image results, including expressions, emotions, poses, outfits, and companions. ",
     problem: "Manual document processing consuming 40+ hours weekly",
     tools: ["n8n", "Telegram", "Midjourney", "X", "OpenAI"],
     results: "Instant image variations, consistent anime-style results",
@@ -88,21 +77,12 @@ const projects = [
   },
 ];
 
-const categories = [
-  "All",
-  "AI Agents",
-  "Workflow",
-  "AI Automation",
-  "Integration",
-];
+const categories = ["All", "AI Agents", "Workflow", "AI Automation", "Integration"];
 
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredProjects =
-    activeCategory === "All"
-      ? projects
-      : projects.filter((p) => p.category === activeCategory);
+  const filteredProjects = activeCategory === "All" ? projects : projects.filter((p) => p.category === activeCategory);
 
   return (
     <section id="portfolio" className="py-24 relative">
@@ -116,17 +96,14 @@ const PortfolioSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <span className="text-primary font-medium text-sm tracking-wider uppercase mb-4 block">
-              Portfolio
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display mb-6">
-              Featured Projects
+            <span className="text-primary font-medium text-sm tracking-wider uppercase mb-4 block">Portfolio</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display mb-4">
+              Featured <span className="text-gradient">Projects</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Real-world automation solutions that delivered measurable business
-              impact.
+              Real-world automation solutions that delivered measurable business impact.
             </p>
           </motion.div>
 
@@ -135,7 +112,7 @@ const PortfolioSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-wrap justify-center gap-3 mb-12"
           >
             {categories.map((category) => (
@@ -156,60 +133,53 @@ const PortfolioSection = () => {
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project, index) => (
-              <motion.a
+              <motion.div
                 key={project.id}
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group glass rounded-2xl p-6 hover:glow-primary transition-all duration-500 cursor-pointer block"
+                whileHover={{ y: -5 }}
+                className="group glass rounded-2xl p-6 hover:glow-primary transition-all duration-300"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
                     <project.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <div className="w-8 h-8 rounded-full glass flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <ArrowUpRight className="w-4 h-4" />
-                  </div>
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/inner w-12 h-12 rounded-xl glass flex items-center justify-center hover:glow-primary hover:text-primary transition-all duration-300 cursor-pointer"
+                  >
+                    <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover/inner:text-primary transition-colors" />
+                  </a>
                 </div>
 
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-secondary text-secondary-foreground mb-3">
-                  {project.category}
-                </span>
+                <span className="text-xs text-primary font-medium uppercase tracking-wider">{project.category}</span>
 
-                <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                <h3 className="text-xl font-semibold font-display mt-2 mb-3 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
 
-                <p className="text-muted-foreground text-sm mb-4 line-clamp-4">
-                  {project.description}
-                </p>
+                <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
 
-                <div className="space-y-3">
-                  <div className="flex flex-wrap gap-2">
+                <div className="border-t border-border/50 pt-4 mt-auto">
+                  <div className="flex flex-wrap gap-2 mb-3">
                     {project.tools.slice(0, 3).map((tool) => (
-                      <span
-                        key={tool}
-                        className="px-2 py-1 rounded-md text-xs bg-muted text-muted-foreground"
-                      >
+                      <span key={tool} className="text-xs px-2 py-1 rounded-md bg-secondary text-muted-foreground">
                         {tool}
                       </span>
                     ))}
                     {project.tools.length > 3 && (
-                      <span className="px-2 py-1 rounded-md text-xs bg-muted text-muted-foreground">
+                      <span className="text-xs px-2 py-1 rounded-md bg-secondary text-muted-foreground">
                         +{project.tools.length - 3}
                       </span>
                     )}
                   </div>
-
-                  <div className="text-sm text-primary font-medium">
-                    📈 {project.results}
-                  </div>
+                  <p className="text-sm text-primary font-medium">📈 {project.results}</p>
                 </div>
-              </motion.a>
+              </motion.div>
             ))}
           </div>
         </div>
