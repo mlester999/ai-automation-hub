@@ -16,47 +16,48 @@ const HeroSection = () => {
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
       
       <div className="container relative z-10 px-4 sm:px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-left"
-          >
-            {/* Location Badge */}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-left"
             >
-              <MapPin className="w-4 h-4 text-primary" />
-              <span className="text-sm text-muted-foreground">Philippines</span>
-            </motion.div>
+              {/* Location Badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8"
+              >
+                <MapPin className="w-4 h-4 text-primary" />
+                <span className="text-sm text-muted-foreground">Philippines</span>
+              </motion.div>
 
-            {/* Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display leading-tight mb-6"
-            >
-              Workflow &<br />
-              <span className="text-gradient">AI Automation</span>
-            </motion.h1>
+              {/* Headline */}
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display leading-tight mb-6"
+              >
+                Workflow &<br />
+                <span className="text-gradient">AI Automation</span>
+              </motion.h1>
 
-            {/* Subheadline */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-lg sm:text-xl text-muted-foreground max-w-xl mb-10"
-            >
-              I help businesses reduce manual work, increase productivity, 
-              and create seamless workflows using Zapier, Make.com, 
-              GoHighLevel, and n8n.
-            </motion.p>
+              {/* Subheadline */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-lg sm:text-xl text-muted-foreground max-w-xl mb-10"
+              >
+                I help businesses save time, reduce errors, and increase productivity 
+                by building seamless automation workflows with Zapier, Make.com, 
+                GoHighLevel, and n8n.
+              </motion.p>
 
             {/* CTA Buttons */}
             <motion.div
@@ -103,7 +104,8 @@ const HeroSection = () => {
             
             {/* Decorative glow behind */}
             <div className="absolute w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] md:w-[450px] md:h-[450px] bg-primary/20 rounded-full blur-3xl -z-10" />
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
 
         {/* Scroll indicator */}
