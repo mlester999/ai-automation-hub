@@ -1,83 +1,113 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Bot, FileText, Mail, MessageSquare, Zap } from "lucide-react";
+import {
+  ArrowUpRight,
+  Bot,
+  FileText,
+  Mail,
+  MessageSquare,
+  Zap,
+} from "lucide-react";
 import { useState } from "react";
 
 const projects = [
   {
     id: 1,
-    title: "AI Customer Support Bot",
-    description: "Built an intelligent chatbot that handles 80% of customer inquiries automatically, reducing response time from hours to seconds.",
-    problem: "High volume of repetitive customer questions overwhelming support team",
-    tools: ["OpenAI", "Make.com", "Slack", "HubSpot"],
-    results: "80% reduction in support tickets, 24/7 availability",
-    icon: MessageSquare,
-    category: "AI Agents",
+    title:
+      "Hoop Shorts — Automation AI-Powered NBA Video Clipping and Shorts Automation",
+    description:
+      "Built an AI-powered automated content system that generates optimized titles and descriptions, discovers long-form NBA videos with no existing Shorts, intelligently identifies and extracts high-impact moments, transforms them into engaging short-form videos, and automatically publishes across YouTube Shorts, Facebook Reels, and Instagram Reels.",
+    problem:
+      "High volume of repetitive customer questions overwhelming support team",
+    tools: ["n8n", "OpenAI", "Klap AI", "Meta", "YouTube"],
+    results:
+      "90% reduction in manual editing work, 5–10 times faster content production",
+    icon: Zap,
+    category: "AI Automation",
+    href: "https://www.youtube.com/@HoopShortsOfficial",
   },
   {
     id: 2,
-    title: "Lead Qualification Pipeline",
-    description: "Automated lead scoring and qualification system that routes prospects to the right sales rep instantly.",
+    title:
+      "Motivation Timepiece — AI-Powered Motivational Quote Image Generation",
+    description:
+      "This AI-powered automated workflow creates and publishes motivational content to Facebook without manual effort. It uses AI to generate quotes from famous motivational speakers, produces matching speaker visuals, adds the quote as text overlay on the image, and automatically uploads the final post to a Facebook page.",
     problem: "Sales team wasting time on unqualified leads",
-    tools: ["n8n", "Airtable", "HubSpot", "Slack"],
-    results: "3x increase in qualified leads, 50% faster response time",
-    icon: Zap,
+    tools: ["Midjourney", "Airtable", "n8n", "Facebook", "Meta"],
+    results: "Zero manual quote research, 100% automated posting",
+    icon: FileText,
     category: "Workflow",
+    href: "https://www.facebook.com/motivation.timepiece/",
   },
   {
     id: 3,
-    title: "Document Processing AI",
-    description: "AI-powered system that extracts, categorizes, and processes documents automatically with high accuracy.",
+    title: "Scarlet Eve AI — Christmas Anime Companion for AI Image Creation",
+    description:
+      "A Christmas-themed anime waifu AI agent available on Telegram, designed to guide users through a cozy and magical AI image creation experience. Users can chat naturally or use simple commands to generate anime-style images filled with winter charm and holiday sparkle. It allows full customization of image results, including expressions, emotions, poses, outfits, and companions.",
     problem: "Manual document processing consuming 40+ hours weekly",
-    tools: ["Claude", "Make.com", "Google Drive", "Notion"],
-    results: "95% accuracy, 40 hours saved per week",
-    icon: FileText,
-    category: "AI Automation",
+    tools: ["n8n", "Telegram", "Midjourney", "X", "OpenAI"],
+    results: "Instant image variations, consistent anime-style results",
+    icon: Bot,
+    category: "AI Agents",
+    href: "https://t.me/ScarletEveAIBot",
   },
   {
     id: 4,
-    title: "Email Automation Suite",
-    description: "Smart email system that drafts personalized responses and manages inbox efficiently using AI.",
+    title: "AI Expense Tracking & Budgeting Workflow",
+    description:
+      "Made an automated expense tracking system that records daily expenses directly from Telegram into Notion in real time. Eliminates manual logging, reduces tracking errors, and provides a centralized, always-updated view of personal or business finances — enabling faster budgeting decisions with zero manual input.",
     problem: "Executives spending 2+ hours daily on email management",
-    tools: ["OpenAI", "Zapier", "Gmail", "Notion"],
-    results: "70% reduction in email handling time",
-    icon: Mail,
-    category: "AI Automation",
+    tools: ["Notion", "n8n", "Telegram", "Gmail", "OpenAI"],
+    results: "Zero missed entries, real-time expense tracking",
+    icon: MessageSquare,
+    category: "Workflow",
+    href: "https://t.me/MarkyExpenseBot",
   },
   {
     id: 5,
-    title: "AI Content Generator",
-    description: "Automated content creation pipeline for social media, blogs, and marketing materials.",
-    problem: "Content team struggling to maintain posting schedule",
-    tools: ["ChatGPT", "Make.com", "Airtable", "Buffer"],
-    results: "5x content output, consistent brand voice",
-    icon: Bot,
-    category: "AI Agents",
+    title: "Motivation Timepiece — Messaging AI Chatbot Integration",
+    description:
+      "Made an intelligent automated messaging chatbot designed to engage followers through meaningful motivational conversations. It responds to user questions about motivation, personal growth, and life advice, provides thoughtful interpretations of deep and inspirational quotes.",
+    problem: "Data silos causing inconsistent customer information",
+    tools: ["Meta", "n8n", "Google", "Stripe"],
+    results: "24/7 automated motivational conversations",
+    icon: Mail,
+    category: "Integration",
+    href: "https://www.messenger.com/t/957891900736687",
   },
   {
     id: 6,
-    title: "CRM Integration Hub",
-    description: "Unified automation system connecting multiple platforms for seamless data flow.",
-    problem: "Data silos causing inconsistent customer information",
-    tools: ["n8n", "HubSpot", "Salesforce", "Stripe"],
-    results: "100% data consistency, zero manual entry",
+    title: "Zapp Tech — AI Automation for Tech Content Repurposing",
+    description:
+      "An AI-powered content automation system that transforms long-form tech videos—such as smartphone, smartwatch, and high-tech reviews—into engaging, social-media-ready shorts. Automatically identifies the best moments, formats clips for YouTube Shorts, Facebook, and Instagram, and publishes them with zero manual editing.",
+    problem: "Content team struggling to maintain posting schedule",
+    tools: ["OpenAI", "Klap AI", "n8n", "OneDrive", "Meta", "YouTube"],
+    results: "AI-selected viral moments, multi-platform auto posting",
     icon: Zap,
-    category: "Integration",
+    category: "AI Automation",
+    href: "https://www.instagram.com/officialzapptech/",
   },
 ];
 
-const categories = ["All", "AI Agents", "Workflow", "AI Automation", "Integration"];
+const categories = [
+  "All",
+  "AI Agents",
+  "Workflow",
+  "AI Automation",
+  "Integration",
+];
 
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredProjects = activeCategory === "All" 
-    ? projects 
-    : projects.filter(p => p.category === activeCategory);
+  const filteredProjects =
+    activeCategory === "All"
+      ? projects
+      : projects.filter((p) => p.category === activeCategory);
 
   return (
     <section id="portfolio" className="py-24 relative">
       <div className="absolute inset-0 bg-gradient-radial opacity-20" />
-      
+
       <div className="container px-4 sm:px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -86,16 +116,17 @@ const PortfolioSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
             <span className="text-primary font-medium text-sm tracking-wider uppercase mb-4 block">
               Portfolio
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display mb-4">
-              Featured <span className="text-gradient">Projects</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display mb-6">
+              Featured Projects
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Real-world automation solutions that delivered measurable business impact.
+              Real-world automation solutions that delivered measurable business
+              impact.
             </p>
           </motion.div>
 
@@ -104,7 +135,7 @@ const PortfolioSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-wrap justify-center gap-3 mb-12"
           >
             {categories.map((category) => (
@@ -125,55 +156,60 @@ const PortfolioSection = () => {
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project, index) => (
-              <motion.div
+              <motion.a
                 key={project.id}
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-                className="group glass rounded-2xl p-6 hover:glow-primary transition-all duration-300"
+                className="group glass rounded-2xl p-6 hover:glow-primary transition-all duration-500 cursor-pointer block"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
                     <project.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                  <div className="w-8 h-8 rounded-full glass flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <ArrowUpRight className="w-4 h-4" />
+                  </div>
                 </div>
-                
-                <span className="text-xs text-primary font-medium uppercase tracking-wider">
+
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-secondary text-secondary-foreground mb-3">
                   {project.category}
                 </span>
-                
-                <h3 className="text-xl font-semibold font-display mt-2 mb-3 group-hover:text-primary transition-colors">
+
+                <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors line-clamp-2">
                   {project.title}
                 </h3>
-                
-                <p className="text-muted-foreground text-sm mb-4">
+
+                <p className="text-muted-foreground text-sm mb-4 line-clamp-4">
                   {project.description}
                 </p>
 
-                <div className="border-t border-border/50 pt-4 mt-auto">
-                  <div className="flex flex-wrap gap-2 mb-3">
+                <div className="space-y-3">
+                  <div className="flex flex-wrap gap-2">
                     {project.tools.slice(0, 3).map((tool) => (
                       <span
                         key={tool}
-                        className="text-xs px-2 py-1 rounded-md bg-secondary text-muted-foreground"
+                        className="px-2 py-1 rounded-md text-xs bg-muted text-muted-foreground"
                       >
                         {tool}
                       </span>
                     ))}
                     {project.tools.length > 3 && (
-                      <span className="text-xs px-2 py-1 rounded-md bg-secondary text-muted-foreground">
+                      <span className="px-2 py-1 rounded-md text-xs bg-muted text-muted-foreground">
                         +{project.tools.length - 3}
                       </span>
                     )}
                   </div>
-                  <p className="text-sm text-primary font-medium">
+
+                  <div className="text-sm text-primary font-medium">
                     📈 {project.results}
-                  </p>
+                  </div>
                 </div>
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </div>
