@@ -5,7 +5,7 @@ import markPhoto from "@/assets/mark-photo.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-20 pb-16 lg:pt-0 lg:pb-0">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-28 sm:pt-24 pb-16 lg:pt-0 lg:pb-0">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-hero" />
       <div className="absolute inset-0 bg-gradient-radial" />
@@ -83,27 +83,28 @@ const HeroSection = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-              className="relative flex items-center justify-center"
+              className="relative flex items-center justify-center w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] lg:w-[480px] lg:h-[480px] mt-2 sm:mt-4 lg:mt-0 mb-10 lg:mb-0"
             >
               {/* Outer glow ring */}
-              <div className="absolute w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] md:w-[360px] md:h-[360px] lg:w-[420px] lg:h-[420px] rounded-full border-2 border-primary/30 animate-pulse-glow" />
-              
+              <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-pulse-glow" />
+
               {/* Inner glow ring */}
-              <div className="absolute w-[175px] h-[175px] sm:w-[245px] sm:h-[245px] md:w-[315px] md:h-[315px] lg:w-[370px] lg:h-[370px] rounded-full border border-primary/50 shadow-[0_0_40px_rgba(34,211,238,0.3)] sm:shadow-[0_0_60px_rgba(34,211,238,0.3)]" />
-              
+              <div className="absolute inset-3 sm:inset-4 rounded-full border border-primary/50 shadow-[0_0_40px_rgba(34,211,238,0.3)] sm:shadow-[0_0_60px_rgba(34,211,238,0.3)]" />
+
               {/* Photo container */}
-              <div className="relative w-[160px] h-[160px] sm:w-[220px] sm:h-[220px] md:w-[280px] md:h-[280px] lg:w-[340px] lg:h-[340px] rounded-full overflow-hidden border-4 border-primary/60 shadow-[0_0_50px_rgba(34,211,238,0.4)] sm:shadow-[0_0_80px_rgba(34,211,238,0.4)]">
-                <img 
-                  src={markPhoto} 
-                  alt="Mark Lester Acak" 
+              <div className="absolute inset-6 sm:inset-7 md:inset-9 rounded-full overflow-hidden border-4 border-primary/60 shadow-[0_0_50px_rgba(34,211,238,0.4)] sm:shadow-[0_0_80px_rgba(34,211,238,0.4)]">
+                <img
+                  src={markPhoto}
+                  alt="Mark Lester Acak"
+                  loading="lazy"
                   className="w-full h-full object-cover object-top"
                 />
                 {/* Overlay gradient for better blending */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
               </div>
-              
+
               {/* Decorative glow behind */}
-              <div className="absolute w-[180px] h-[180px] sm:w-[260px] sm:h-[260px] md:w-[340px] md:h-[340px] lg:w-[400px] lg:h-[400px] bg-primary/20 rounded-full blur-3xl -z-10" />
+              <div className="absolute inset-4 sm:inset-6 bg-primary/20 rounded-full blur-3xl -z-10" />
             </motion.div>
           </div>
         </div>
@@ -114,7 +115,7 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden sm:block"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden lg:block"
       >
         <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
           <motion.div
