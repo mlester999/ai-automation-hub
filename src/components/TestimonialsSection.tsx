@@ -3,21 +3,21 @@ import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Jordan Hayes",
-    role: "Founder, Hoop Shorts",
-    content: "Mark built an incredible AI-powered video clipping system for our NBA content. We went from spending hours manually editing to having 5-10x faster content production. The automation discovers videos, extracts highlights, and publishes across all platforms automatically!",
+    name: "Hoop Shorts",
+    role: "AI-Powered NBA Video Clipping",
+    content: "Built an AI-powered automated content system that generates optimized titles and descriptions, discovers long-form NBA videos, intelligently identifies high-impact moments, and automatically publishes across YouTube Shorts, Facebook Reels, and Instagram Reels.",
     rating: 5,
   },
   {
-    name: "Alex Rivera",
-    role: "Creator, Motivation Timepiece",
-    content: "The AI chatbot and automated quote generation system Mark created transformed our Facebook page. We now have 24/7 motivational conversations with followers and 100% automated posting. Zero manual work required!",
+    name: "Motivation Timepiece",
+    role: "AI Quote Generation & Chatbot",
+    content: "Created an AI-powered workflow that generates motivational quotes, produces matching speaker visuals, and automatically posts to Facebook. Plus an intelligent chatbot for 24/7 motivational conversations with followers.",
     rating: 5,
   },
   {
-    name: "Sam Nakamura",
-    role: "Owner, Zapp Tech",
-    content: "Mark's content repurposing automation is a game-changer. It takes our long-form tech reviews and automatically creates engaging shorts for YouTube, Facebook, and Instagram. AI-selected viral moments with multi-platform auto posting!",
+    name: "Zapp Tech",
+    role: "Tech Content Repurposing",
+    content: "An AI-powered content automation system that transforms long-form tech reviews into engaging, social-media-ready shorts. Automatically identifies the best moments and publishes across YouTube, Facebook, and Instagram.",
     rating: 5,
   },
 ];
