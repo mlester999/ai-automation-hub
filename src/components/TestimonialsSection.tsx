@@ -3,21 +3,21 @@ import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Chen",
-    role: "CEO, TechFlow Inc",
-    content: "Mark completely transformed our customer support operations. The AI chatbot he built handles thousands of queries daily with incredible accuracy. Our team now focuses on complex issues while routine questions are resolved instantly.",
+    name: "Jordan Hayes",
+    role: "Founder, Hoop Shorts",
+    content: "Mark built an incredible AI-powered video clipping system for our NBA content. We went from spending hours manually editing to having 5-10x faster content production. The automation discovers videos, extracts highlights, and publishes across all platforms automatically!",
     rating: 5,
   },
   {
-    name: "Michael Rodriguez",
-    role: "Operations Director, ScaleUp",
-    content: "The automation workflows Mark implemented saved us 200+ hours per month. His attention to detail and understanding of our business processes made the transition seamless. Highly recommended!",
+    name: "Alex Rivera",
+    role: "Creator, Motivation Timepiece",
+    content: "The AI chatbot and automated quote generation system Mark created transformed our Facebook page. We now have 24/7 motivational conversations with followers and 100% automated posting. Zero manual work required!",
     rating: 5,
   },
   {
-    name: "Emily Watson",
-    role: "Founder, DataDriven",
-    content: "Working with Mark was a game-changer. He didn't just automate our processes—he reimagined them. The ROI we've seen in just 3 months has been incredible.",
+    name: "Sam Nakamura",
+    role: "Owner, Zapp Tech",
+    content: "Mark's content repurposing automation is a game-changer. It takes our long-form tech reviews and automatically creates engaging shorts for YouTube, Facebook, and Instagram. AI-selected viral moments with multi-platform auto posting!",
     rating: 5,
   },
 ];
