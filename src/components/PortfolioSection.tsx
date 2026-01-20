@@ -145,7 +145,7 @@ const PortfolioSection = () => {
           </motion.div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -157,7 +157,7 @@ const PortfolioSection = () => {
                 className="group glass rounded-2xl overflow-hidden hover:glow-primary transition-all duration-300"
               >
                 {/* Background Image */}
-                <div className="relative h-32 overflow-hidden">
+                <div className="relative h-56 sm:h-64 overflow-hidden">
                   <img 
                     src={project.image} 
                     alt={project.title}
