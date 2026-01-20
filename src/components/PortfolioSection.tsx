@@ -2,6 +2,14 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Bot, FileText, Mail, MessageSquare, Zap } from "lucide-react";
 import { useState } from "react";
 
+// Import project images
+import hoopShortsImg from "@/assets/project-hoop-shorts.png";
+import motivationTimepieceImg from "@/assets/project-motivation-timepiece.png";
+import scarletEveImg from "@/assets/project-scarlet-eve.png";
+import expenseTrackingImg from "@/assets/project-expense-tracking.png";
+import chatbotImg from "@/assets/project-chatbot.png";
+import zappTechImg from "@/assets/project-zapp-tech.png";
+
 const projects = [
   {
     id: 1,
@@ -14,6 +22,7 @@ const projects = [
     icon: Zap,
     category: "AI Automation",
     href: "https://www.youtube.com/@HoopShortsOfficial",
+    image: hoopShortsImg,
   },
   {
     id: 2,
@@ -26,6 +35,7 @@ const projects = [
     icon: FileText,
     category: "Workflow",
     href: "https://www.facebook.com/motivation.timepiece/",
+    image: motivationTimepieceImg,
   },
   {
     id: 3,
@@ -38,6 +48,7 @@ const projects = [
     icon: Bot,
     category: "AI Agents",
     href: "https://t.me/ScarletEveAIBot",
+    image: scarletEveImg,
   },
   {
     id: 4,
@@ -50,6 +61,7 @@ const projects = [
     icon: MessageSquare,
     category: "Workflow",
     href: "https://t.me/MarkyExpenseBot",
+    image: expenseTrackingImg,
   },
   {
     id: 5,
@@ -62,6 +74,7 @@ const projects = [
     icon: Mail,
     category: "Integration",
     href: "https://www.messenger.com/t/957891900736687",
+    image: chatbotImg,
   },
   {
     id: 6,
@@ -74,6 +87,7 @@ const projects = [
     icon: Zap,
     category: "AI Automation",
     href: "https://www.instagram.com/officialzapptech/",
+    image: zappTechImg,
   },
 ];
 
@@ -140,44 +154,55 @@ const PortfolioSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="group glass rounded-2xl p-6 hover:glow-primary transition-all duration-300"
+                className="group glass rounded-2xl overflow-hidden hover:glow-primary transition-all duration-300"
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                    <project.icon className="w-6 h-6 text-primary" />
+                {/* Background Image */}
+                <div className="relative h-32 overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+                  <div className="absolute top-4 left-4">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 backdrop-blur-sm flex items-center justify-center">
+                      <project.icon className="w-5 h-5 text-primary" />
+                    </div>
                   </div>
                   <a
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/inner w-12 h-12 rounded-xl glass flex items-center justify-center hover:glow-primary hover:text-primary transition-all duration-300 cursor-pointer"
+                    className="absolute top-4 right-4 w-10 h-10 rounded-xl glass backdrop-blur-sm flex items-center justify-center hover:glow-primary hover:text-primary transition-all duration-300 cursor-pointer"
                   >
-                    <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover/inner:text-primary transition-colors" />
+                    <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                   </a>
                 </div>
 
-                <span className="text-xs text-primary font-medium uppercase tracking-wider">{project.category}</span>
+                <div className="p-6">
+                  <span className="text-xs text-primary font-medium uppercase tracking-wider">{project.category}</span>
 
-                <h3 className="text-xl font-semibold font-display mt-2 mb-3 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
+                  <h3 className="text-xl font-semibold font-display mt-2 mb-3 group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
 
-                <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
+                  <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
 
-                <div className="border-t border-border/50 pt-4 mt-auto">
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {project.tools.slice(0, 3).map((tool) => (
-                      <span key={tool} className="text-xs px-2 py-1 rounded-md bg-secondary text-muted-foreground">
-                        {tool}
-                      </span>
-                    ))}
-                    {project.tools.length > 3 && (
-                      <span className="text-xs px-2 py-1 rounded-md bg-secondary text-muted-foreground">
-                        +{project.tools.length - 3}
-                      </span>
-                    )}
+                  <div className="border-t border-border/50 pt-4 mt-auto">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {project.tools.slice(0, 3).map((tool) => (
+                        <span key={tool} className="text-xs px-2 py-1 rounded-md bg-secondary text-muted-foreground">
+                          {tool}
+                        </span>
+                      ))}
+                      {project.tools.length > 3 && (
+                        <span className="text-xs px-2 py-1 rounded-md bg-secondary text-muted-foreground">
+                          +{project.tools.length - 3}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-sm text-primary font-medium">📈 {project.results}</p>
                   </div>
-                  <p className="text-sm text-primary font-medium">📈 {project.results}</p>
                 </div>
               </motion.div>
             ))}
