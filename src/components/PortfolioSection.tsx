@@ -65,12 +65,12 @@ const projects = [
   },
   {
     id: 5,
-    title: "Motivation Timepiece — Messaging AI Chatbot Integration",
+    title: "Cavinti Suite — AI Support Agent Chatbot Integration",
     description:
-      "Made an intelligent automated messaging chatbot designed to engage followers through meaningful motivational conversations. It responds to user questions about motivation, personal growth, and life advice, provides thoughtful interpretations of deep and inspirational quotes.",
+      "Made an intelligent automated messaging chatbot for an Airbnb property called Cavinti Suite in Cavinti, Laguna, Philippines. It responds to guest inquiries, handles booking questions, manages appointment scheduling, provides property information, and assists with check-in/check-out details — all available 24/7 without manual intervention.",
     problem: "Data silos causing inconsistent customer information",
     tools: ["Meta", "n8n", "Google", "Stripe"],
-    results: "24/7 automated motivational conversations",
+    results: "24/7 automated guest support and booking assistance",
     icon: Mail,
     category: "Integration",
     href: "https://www.messenger.com/t/957891900736687",
