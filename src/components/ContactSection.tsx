@@ -69,7 +69,7 @@ const ContactSection = () => {
               </div>
               <div
                 className="calendly-inline-widget rounded-xl overflow-hidden"
-                data-url="https://calendly.com/your-calendly-username/30min?hide_gdpr_banner=1&background_color=0a0a0f&text_color=e4e4e7&primary_color=22d3ee"
+                data-url="https://calendly.com/mlester0806/30min?hide_gdpr_banner=1&background_color=0a0a0f&text_color=e4e4e7&primary_color=22d3ee"
                 style={{ minWidth: "280px", height: "600px" }}
               />
             </motion.div>
