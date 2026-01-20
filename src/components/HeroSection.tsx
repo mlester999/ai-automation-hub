@@ -5,7 +5,7 @@ import markPhoto from "@/assets/mark-photo.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-28 sm:pt-24 pb-16 lg:pt-0 lg:pb-0">
+    <section className="relative min-h-screen flex items-center overflow-hidden py-24 lg:py-0">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-hero" />
       <div className="absolute inset-0 bg-gradient-radial" />
@@ -17,13 +17,42 @@ const HeroSection = () => {
       
       <div className="container relative z-10 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Left Content */}
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+            {/* Photo - shown first on mobile */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+              className="relative flex items-center justify-center w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] md:w-[360px] md:h-[360px] lg:w-[420px] lg:h-[420px] lg:order-2"
+            >
+              {/* Outer glow ring */}
+              <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-pulse-glow" />
+
+              {/* Inner glow ring */}
+              <div className="absolute inset-2 sm:inset-3 rounded-full border border-primary/50 shadow-[0_0_30px_rgba(34,211,238,0.3)] sm:shadow-[0_0_50px_rgba(34,211,238,0.3)]" />
+
+              {/* Photo container */}
+              <div className="absolute inset-4 sm:inset-6 md:inset-8 rounded-full overflow-hidden border-4 border-primary/60 shadow-[0_0_40px_rgba(34,211,238,0.4)] sm:shadow-[0_0_60px_rgba(34,211,238,0.4)]">
+                <img
+                  src={markPhoto}
+                  alt="Mark Lester Acak"
+                  loading="lazy"
+                  className="w-full h-full object-cover object-top"
+                />
+                {/* Overlay gradient for better blending */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
+              </div>
+
+              {/* Decorative glow behind */}
+              <div className="absolute inset-3 sm:inset-5 bg-primary/20 rounded-full blur-3xl -z-10" />
+            </motion.div>
+
+            {/* Text Content */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-center lg:text-left"
+              className="text-center lg:text-left lg:order-1"
             >
               {/* Location Badge */}
               <motion.div
@@ -76,35 +105,6 @@ const HeroSection = () => {
                   <a href="#contact">Contact Me</a>
                 </Button>
               </motion.div>
-            </motion.div>
-
-            {/* Right Content - Photo with Glow Ring */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-              className="relative flex items-center justify-center w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] lg:w-[480px] lg:h-[480px] mt-2 sm:mt-4 lg:mt-0 mb-10 lg:mb-0"
-            >
-              {/* Outer glow ring */}
-              <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-pulse-glow" />
-
-              {/* Inner glow ring */}
-              <div className="absolute inset-3 sm:inset-4 rounded-full border border-primary/50 shadow-[0_0_40px_rgba(34,211,238,0.3)] sm:shadow-[0_0_60px_rgba(34,211,238,0.3)]" />
-
-              {/* Photo container */}
-              <div className="absolute inset-6 sm:inset-7 md:inset-9 rounded-full overflow-hidden border-4 border-primary/60 shadow-[0_0_50px_rgba(34,211,238,0.4)] sm:shadow-[0_0_80px_rgba(34,211,238,0.4)]">
-                <img
-                  src={markPhoto}
-                  alt="Mark Lester Acak"
-                  loading="lazy"
-                  className="w-full h-full object-cover object-top"
-                />
-                {/* Overlay gradient for better blending */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
-              </div>
-
-              {/* Decorative glow behind */}
-              <div className="absolute inset-4 sm:inset-6 bg-primary/20 rounded-full blur-3xl -z-10" />
             </motion.div>
           </div>
         </div>
