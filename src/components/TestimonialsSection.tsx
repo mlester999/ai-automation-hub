@@ -20,6 +20,24 @@ const testimonials = [
     content: "An AI-powered content automation system that transforms long-form tech reviews into engaging, social-media-ready shorts. Automatically identifies the best moments and publishes across YouTube, Facebook, and Instagram.",
     rating: 5,
   },
+  {
+    name: "Scarlet Eve AI",
+    role: "Telegram AI Image Bot",
+    content: "A Christmas-themed anime AI agent on Telegram that guides users through magical AI image creation. Offers full customization of expressions, poses, outfits, and companions with consistent anime-style results.",
+    rating: 5,
+  },
+  {
+    name: "Cavinti Suite",
+    role: "Airbnb AI Support Agent",
+    content: "An intelligent automated messaging chatbot for an Airbnb property that responds to guest inquiries, handles booking questions, manages scheduling, and assists with check-in/check-out details — available 24/7.",
+    rating: 5,
+  },
+  {
+    name: "Mitchy Dental Lounge",
+    role: "AI Voice Receptionist",
+    content: "An AI-powered voice receptionist that handles appointment scheduling, slot availability checks, booking confirmations, and updates through natural voice conversations. Integrates with Google Calendar for real-time availability.",
+    rating: 5,
+  },
 ];
 
 const TestimonialsSection = () => {
