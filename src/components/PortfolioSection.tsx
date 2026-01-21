@@ -157,11 +157,11 @@ const PortfolioSection = () => {
                 className="group glass rounded-2xl overflow-hidden hover:glow-primary transition-all duration-300"
               >
                 {/* Background Image */}
-                <div className="relative h-56 sm:h-64 overflow-hidden">
+                <div className="relative h-56 sm:h-64 overflow-hidden bg-[#1a1a1a]">
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-full object-cover object-left opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-500"
+                    className="w-full h-full object-contain opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
                   <div className="absolute top-4 left-4">
