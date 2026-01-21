@@ -5,37 +5,37 @@ const testimonials = [
   {
     name: "Hoop Shorts",
     role: "AI-Powered NBA Video Clipping",
-    content: "Built an AI-powered automated content system that generates optimized titles and descriptions, discovers long-form NBA videos, intelligently identifies high-impact moments, and automatically publishes across YouTube Shorts, Facebook Reels, and Instagram Reels.",
+    content: "Mark built us an incredible AI system that completely transformed our content workflow. What used to take hours of manual editing now runs automatically — finding NBA highlights, creating shorts, and posting everywhere. Absolutely game-changing!",
     rating: 5,
   },
   {
     name: "Motivation Timepiece",
     role: "AI Quote Generation & Chatbot",
-    content: "Created an AI-powered workflow that generates motivational quotes, produces matching speaker visuals, and automatically posts to Facebook. Plus an intelligent chatbot for 24/7 motivational conversations with followers.",
+    content: "Working with Mark was amazing. He created an automation that generates quotes, designs images, and posts to Facebook without me lifting a finger. Plus the chatbot he built keeps our followers engaged 24/7. Highly recommend!",
     rating: 5,
   },
   {
     name: "Zapp Tech",
     role: "Tech Content Repurposing",
-    content: "An AI-powered content automation system that transforms long-form tech reviews into engaging, social-media-ready shorts. Automatically identifies the best moments and publishes across YouTube, Facebook, and Instagram.",
+    content: "Mark delivered exactly what we needed — an AI system that turns our long tech reviews into viral shorts automatically. The quality is incredible and it posts to all our platforms. Best investment we've made!",
     rating: 5,
   },
   {
     name: "Scarlet Eve AI",
     role: "Telegram AI Image Bot",
-    content: "A Christmas-themed anime AI agent on Telegram that guides users through magical AI image creation. Offers full customization of expressions, poses, outfits, and companions with consistent anime-style results.",
+    content: "Mark created the most unique Telegram bot for us. Our users love the anime image generation experience he built. The customization options are endless and the results are consistently beautiful. Mark really knows his stuff!",
     rating: 5,
   },
   {
     name: "Cavinti Suite",
     role: "Airbnb AI Support Agent",
-    content: "An intelligent automated messaging chatbot for an Airbnb property that responds to guest inquiries, handles booking questions, manages scheduling, and assists with check-in/check-out details — available 24/7.",
+    content: "Before Mark's chatbot, we were overwhelmed with guest inquiries. Now our AI assistant handles everything — bookings, questions, check-ins — all day, every day. Mark saved us countless hours and improved our guest experience!",
     rating: 5,
   },
   {
     name: "Mitchy Dental Lounge",
     role: "AI Voice Receptionist",
-    content: "An AI-powered voice receptionist that handles appointment scheduling, slot availability checks, booking confirmations, and updates through natural voice conversations. Integrates with Google Calendar for real-time availability.",
+    content: "Mark built us an AI voice receptionist that handles all our appointment calls. It checks availability, books slots, and sends confirmations — all through natural conversation. We never miss a booking anymore. Mark is a genius!",
     rating: 5,
   },
 ];
