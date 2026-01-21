@@ -73,7 +73,7 @@ const projects = [
     results: "24/7 automated guest support and booking assistance",
     icon: Mail,
     category: "Integration",
-    href: "https://www.messenger.com/t/957891900736687",
+    href: "https://www.facebook.com/cavinti.suite/",
     image: chatbotImg,
   },
   {
