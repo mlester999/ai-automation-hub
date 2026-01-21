@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Bot, FileText, Mail, MessageSquare, Zap } from "lucide-react";
+import { ArrowUpRight, Bot, FileText, Mail, MessageSquare, Phone, Zap } from "lucide-react";
 import { useState } from "react";
 
 // Import project images
@@ -9,6 +9,7 @@ import scarletEveImg from "@/assets/project-scarlet-eve.png";
 import expenseTrackingImg from "@/assets/project-expense-tracking.png";
 import chatbotImg from "@/assets/project-chatbot.png";
 import zappTechImg from "@/assets/project-zapp-tech.png";
+import mitchyDentalImg from "@/assets/project-mitchy-dental.png";
 
 const projects = [
   {
@@ -88,6 +89,19 @@ const projects = [
     category: "AI Automation",
     href: "https://www.instagram.com/officialzapptech/",
     image: zappTechImg,
+  },
+  {
+    id: 7,
+    title: "Mitchy Dental Lounge — AI Voice Receptionist",
+    description:
+      "Built an AI-powered voice receptionist for Mitchy Dental Lounge that handles appointment scheduling, slot availability checks, booking confirmations, and appointment updates — all through natural voice conversations. Integrates with Google Calendar for real-time availability and automated booking management.",
+    problem: "Missed calls and manual appointment scheduling overwhelming front desk staff",
+    tools: ["n8n", "ElevenLabs", "Google Calendar", "OpenAI", "Airtable"],
+    results: "24/7 automated appointment scheduling, zero missed bookings",
+    icon: Phone,
+    category: "AI Agents",
+    href: "#",
+    image: mitchyDentalImg,
   },
 ];
 
