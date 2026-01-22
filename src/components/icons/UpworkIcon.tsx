@@ -3,25 +3,16 @@ import { SVGProps } from "react";
 const UpworkIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    width="24"
-    height="24"
+    viewBox="0 0 56.7 56.7"
+    fill="currentColor"
+    width="20"
+    height="20"
     {...props}
   >
-    {/* Left curved path */}
-    <path d="M4 10.5c0 2.5 2 4.5 4.5 4.5 1.5 0 2.8-.7 3.7-1.8" />
-    <path d="M8.5 6C6 6 4 8 4 10.5" />
-    {/* Rising line from middle */}
-    <path d="M12.2 13.2L14.5 6" />
-    {/* Right arc with dot */}
-    <path d="M14.5 6c0 0 1 5.5 4 5.5 1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3" />
-    {/* Descending line */}
-    <path d="M12.2 13.2l2.3 5.8" />
+    <path d="M42.4,17.7c-5.3,0-9.3,3.5-10.9,9c-2.5-3.9-4.4-8.5-5.5-12.3h-5.6v17.2c0,3.1-2.5,5.6-5.6,5.6
+      c-3.1,0-5.6-2.5-5.6-5.6V14.4H3.6v17.2c0,6.2,5.1,11.3,11.3,11.3c6.2,0,11.3-5.1,11.3-11.3v-2.9c1.1,2.3,2.4,4.6,4,6.7l-3.4,16
+      h5.7l2.5-11.7c2.2,1.4,4.7,2.2,7.5,2.2c6.2,0,11.4-5,11.4-11.4C53.8,22.7,48.6,17.7,42.4,17.7z M42.4,36.2c-2.5,0-4.9-1.1-6.7-2.8
+      l0.5-2.5l0.2-0.8c0.4-2.6,1.9-7,5.9-7c3.1,0,5.6,2.5,5.6,5.6C48,33.8,45.5,36.2,42.4,36.2z"/>
   </svg>
 );
 
