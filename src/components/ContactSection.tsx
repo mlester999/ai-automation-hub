@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Linkedin, Briefcase, Mail, Calendar } from "lucide-react";
 import { useEffect } from "react";
-import { UpworkIcon } from "./icons";
+import { UpworkIcon } from "./icons/UpworkIcon";
 
 const ContactSection = () => {
   const socialLinks = [
