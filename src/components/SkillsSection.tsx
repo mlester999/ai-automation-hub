@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Marquee from "@/components/ui/marquee";
-
+import claudeLogo from "@/assets/claude-logo.png";
 // First row tools
 const toolsRow1 = [
   { name: "Make.com", logo: "https://cdn.worldvectorlogo.com/logos/make-1.svg" },
@@ -8,8 +8,7 @@ const toolsRow1 = [
   { name: "n8n", logo: "https://n8n.io/favicon.ico" },
   { name: "OpenAI", logo: "https://cdn.worldvectorlogo.com/logos/openai-2.svg" },
   { name: "LangChain", logo: "https://avatars.githubusercontent.com/u/126733545?s=200&v=4" },
-  { name: "ChatGPT", logo: "https://cdn.worldvectorlogo.com/logos/chatgpt-4.svg" },
-  { name: "Claude", logo: "https://www.anthropic.com/favicon.ico" },
+  { name: "Claude", logo: claudeLogo },
   { name: "Airtable", logo: "https://cdn.worldvectorlogo.com/logos/airtable-1.svg" },
   { name: "OpenRouter", logo: "https://openrouter.ai/favicon.ico" },
   { name: "Grok", logo: "https://x.ai/favicon.ico" },
