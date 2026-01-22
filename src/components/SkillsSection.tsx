@@ -3,10 +3,14 @@ import Marquee from "@/components/ui/marquee";
 import claudeLogo from "@/assets/claude-logo.png";
 import makeLogo from "@/assets/make-logo.png";
 import googleSheetsLogo from "@/assets/google-sheets-logo.png";
+import midjourneyLogo from "@/assets/midjourney-logo.png";
+import zapierLogo from "@/assets/zapier-logo.png";
+import googleDocsLogo from "@/assets/google-docs-logo.png";
+
 // First row tools
 const toolsRow1 = [
   { name: "Make.com", logo: makeLogo },
-  { name: "Zapier", logo: "https://cdn.worldvectorlogo.com/logos/zapier-2.svg" },
+  { name: "Zapier", logo: zapierLogo },
   { name: "n8n", logo: "https://n8n.io/favicon.ico" },
   { name: "OpenAI", logo: "https://cdn.worldvectorlogo.com/logos/openai-2.svg" },
   { name: "LangChain", logo: "https://avatars.githubusercontent.com/u/126733545?s=200&v=4" },
@@ -30,8 +34,8 @@ const toolsRow2 = [
   { name: "GoHighLevel", logo: "https://assets.cdn.filesafe.space/CbtJkQn3xgTyE1dYsCCn/media/65694b4a82f02211f4d80e8c.png" },
   { name: "Asana", logo: "https://cdn.worldvectorlogo.com/logos/asana-logo.svg" },
   { name: "Freepik", logo: "https://cdn.worldvectorlogo.com/logos/freepik.svg" },
-  { name: "Midjourney", logo: "https://cdn.worldvectorlogo.com/logos/midjourney.svg" },
-  { name: "Google Docs", logo: "https://cdn.worldvectorlogo.com/logos/google-docs-2020.svg" },
+  { name: "Midjourney", logo: midjourneyLogo },
+  { name: "Google Docs", logo: googleDocsLogo },
   { name: "Google Sheets", logo: googleSheetsLogo },
 ];
 
