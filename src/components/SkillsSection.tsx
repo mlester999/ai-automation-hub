@@ -11,6 +11,7 @@ import googleCalendarLogo from "@/assets/google-calendar-logo.png";
 import notionLogo from "@/assets/notion-logo.png";
 import openaiLogo from "@/assets/openai-logo.png";
 import gohighlevelLogo from "@/assets/gohighlevel-logo.png";
+import whatsappLogo from "@/assets/whatsapp-logo.png";
 
 // First row tools
 const toolsRow1 = [
@@ -37,7 +38,7 @@ const toolsRow2 = [
   { name: "Google Calendar", logo: googleCalendarLogo },
   { name: "Telegram", logo: "https://cdn.worldvectorlogo.com/logos/telegram-1.svg" },
   { name: "GoHighLevel", logo: gohighlevelLogo },
-  { name: "WhatsApp", logo: "https://cdn.worldvectorlogo.com/logos/whatsapp-icon.svg" },
+  { name: "WhatsApp", logo: whatsappLogo },
   { name: "Asana", logo: "https://cdn.worldvectorlogo.com/logos/asana-logo.svg" },
   { name: "Freepik", logo: "https://cdn.worldvectorlogo.com/logos/freepik.svg" },
   { name: "Midjourney", logo: midjourneyLogo },
