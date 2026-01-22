@@ -6,6 +6,8 @@ import googleSheetsLogo from "@/assets/google-sheets-logo.png";
 import midjourneyLogo from "@/assets/midjourney-logo.png";
 import zapierLogo from "@/assets/zapier-logo.png";
 import googleDocsLogo from "@/assets/google-docs-logo.png";
+import airtableLogo from "@/assets/airtable-logo.png";
+import googleCalendarLogo from "@/assets/google-calendar-logo.png";
 
 // First row tools
 const toolsRow1 = [
@@ -15,7 +17,7 @@ const toolsRow1 = [
   { name: "OpenAI", logo: "https://cdn.worldvectorlogo.com/logos/openai-2.svg" },
   { name: "LangChain", logo: "https://avatars.githubusercontent.com/u/126733545?s=200&v=4" },
   { name: "Claude", logo: claudeLogo },
-  { name: "Airtable", logo: "https://cdn.worldvectorlogo.com/logos/airtable-1.svg" },
+  { name: "Airtable", logo: airtableLogo },
   { name: "OpenRouter", logo: "https://openrouter.ai/favicon.ico" },
   { name: "Grok", logo: "https://x.ai/favicon.ico" },
   { name: "Vapi", logo: "https://vapi.ai/favicon.ico" },
@@ -29,7 +31,7 @@ const toolsRow2 = [
   { name: "HubSpot", logo: "https://cdn.worldvectorlogo.com/logos/hubspot-1.svg" },
   { name: "Stripe", logo: "https://cdn.worldvectorlogo.com/logos/stripe-4.svg" },
   { name: "ElevenLabs", logo: "https://elevenlabs.io/favicon.ico" },
-  { name: "Google Calendar", logo: "https://cdn.worldvectorlogo.com/logos/google-calendar-2020.svg" },
+  { name: "Google Calendar", logo: googleCalendarLogo },
   { name: "Telegram", logo: "https://cdn.worldvectorlogo.com/logos/telegram-1.svg" },
   { name: "GoHighLevel", logo: "https://assets.cdn.filesafe.space/CbtJkQn3xgTyE1dYsCCn/media/65694b4a82f02211f4d80e8c.png" },
   { name: "Asana", logo: "https://cdn.worldvectorlogo.com/logos/asana-logo.svg" },
