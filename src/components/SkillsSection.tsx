@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import Marquee from "@/components/ui/marquee";
 
-const tools = [
+// First row tools
+const toolsRow1 = [
   { name: "Make.com", logo: "https://cdn.worldvectorlogo.com/logos/make-1.svg" },
   { name: "Zapier", logo: "https://cdn.worldvectorlogo.com/logos/zapier-2.svg" },
   { name: "n8n", logo: "https://n8n.io/favicon.ico" },
@@ -10,6 +11,10 @@ const tools = [
   { name: "ChatGPT", logo: "https://cdn.worldvectorlogo.com/logos/chatgpt-4.svg" },
   { name: "Claude", logo: "https://www.anthropic.com/favicon.ico" },
   { name: "Airtable", logo: "https://cdn.worldvectorlogo.com/logos/airtable-1.svg" },
+];
+
+// Second row tools (different set)
+const toolsRow2 = [
   { name: "Notion", logo: "https://cdn.worldvectorlogo.com/logos/notion-2.svg" },
   { name: "Slack", logo: "https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg" },
   { name: "HubSpot", logo: "https://cdn.worldvectorlogo.com/logos/hubspot-1.svg" },
@@ -79,13 +84,13 @@ const SkillsSection = () => {
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
           
           <Marquee pauseOnHover className="[--duration:30s] py-4">
-            {tools.map((tool) => (
+            {toolsRow1.map((tool) => (
               <ToolCard key={tool.name} tool={tool} />
             ))}
           </Marquee>
           
           <Marquee pauseOnHover reverse className="[--duration:35s] py-4">
-            {tools.map((tool) => (
+            {toolsRow2.map((tool) => (
               <ToolCard key={tool.name} tool={tool} />
             ))}
           </Marquee>
