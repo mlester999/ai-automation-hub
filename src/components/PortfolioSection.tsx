@@ -185,17 +185,17 @@ const PortfolioSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="group glass rounded-2xl overflow-hidden hover:glow-primary transition-all duration-300"
+                className="glass rounded-2xl overflow-hidden hover:glow-primary transition-all duration-300"
               >
-                {/* Background Image - Now Clickable */}
+                {/* Background Image - Now Clickable with its own group */}
                 <div 
-                  className="relative h-56 sm:h-64 overflow-hidden bg-[#1a1a1a] cursor-pointer"
+                  className="group/image relative h-56 sm:h-64 overflow-hidden bg-[#1a1a1a] cursor-pointer"
                   onClick={() => handleImageClick(project)}
                 >
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-full object-contain opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
+                    className="w-full h-full object-contain opacity-70 group-hover/image:opacity-90 group-hover/image:scale-105 transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background pointer-events-none" />
                   <div className="absolute top-4 left-4 pointer-events-none">
@@ -204,7 +204,7 @@ const PortfolioSection = () => {
                     </div>
                   </div>
                   {/* Click hint */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 pointer-events-none">
                     <span className="px-4 py-2 rounded-full glass text-sm font-medium text-primary">
                       Click to view gallery
                     </span>
