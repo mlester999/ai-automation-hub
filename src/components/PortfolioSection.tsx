@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Bot, FileText, Mail, MessageSquare, Phone, Zap } from "lucide-react";
+import { ArrowUpRight, Bot, ChevronLeft, ChevronRight, FileText, Mail, MessageSquare, Phone, X, Zap } from "lucide-react";
 import { useState } from "react";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 // Import project images
 import hoopShortsImg from "@/assets/project-hoop-shorts.png";
@@ -24,6 +27,7 @@ const projects = [
     category: "AI Automation",
     href: "https://www.youtube.com/@HoopShortsOfficial",
     image: hoopShortsImg,
+    gallery: [hoopShortsImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
   {
     id: 2,
@@ -37,6 +41,7 @@ const projects = [
     category: "Workflow",
     href: "https://www.facebook.com/motivation.timepiece/",
     image: motivationTimepieceImg,
+    gallery: [motivationTimepieceImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
   {
     id: 3,
@@ -50,6 +55,7 @@ const projects = [
     category: "AI Agents",
     href: "https://t.me/ScarletEveAIBot",
     image: scarletEveImg,
+    gallery: [scarletEveImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
   {
     id: 4,
@@ -63,6 +69,7 @@ const projects = [
     category: "Workflow",
     href: "https://t.me/MarkyExpenseBot",
     image: expenseTrackingImg,
+    gallery: [expenseTrackingImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
   {
     id: 5,
@@ -76,6 +83,7 @@ const projects = [
     category: "Integration",
     href: "https://www.facebook.com/cavinti.suite/",
     image: chatbotImg,
+    gallery: [chatbotImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
   {
     id: 6,
@@ -89,6 +97,7 @@ const projects = [
     category: "AI Automation",
     href: "https://www.instagram.com/officialzapptech/",
     image: zappTechImg,
+    gallery: [zappTechImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
   {
     id: 7,
@@ -102,6 +111,7 @@ const projects = [
     category: "AI Agents",
     href: "#",
     image: mitchyDentalImg,
+    gallery: [mitchyDentalImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
 ];
 
@@ -109,8 +119,15 @@ const categories = ["All", "AI Agents", "Workflow", "AI Automation", "Integratio
 
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const filteredProjects = activeCategory === "All" ? projects : projects.filter((p) => p.category === activeCategory);
+
+  const handleImageClick = (project: typeof projects[0]) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
 
   return (
     <section id="portfolio" className="py-24 relative">
@@ -170,24 +187,34 @@ const PortfolioSection = () => {
                 whileHover={{ y: -5 }}
                 className="group glass rounded-2xl overflow-hidden hover:glow-primary transition-all duration-300"
               >
-                {/* Background Image */}
-                <div className="relative h-56 sm:h-64 overflow-hidden bg-[#1a1a1a]">
+                {/* Background Image - Now Clickable */}
+                <div 
+                  className="relative h-56 sm:h-64 overflow-hidden bg-[#1a1a1a] cursor-pointer"
+                  onClick={() => handleImageClick(project)}
+                >
                   <img 
                     src={project.image} 
                     alt={project.title}
                     className="w-full h-full object-contain opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
-                  <div className="absolute top-4 left-4">
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background pointer-events-none" />
+                  <div className="absolute top-4 left-4 pointer-events-none">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 backdrop-blur-sm flex items-center justify-center">
                       <project.icon className="w-5 h-5 text-primary" />
                     </div>
+                  </div>
+                  {/* Click hint */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <span className="px-4 py-2 rounded-full glass text-sm font-medium text-primary">
+                      Click to view gallery
+                    </span>
                   </div>
                   <a
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute top-4 right-4 w-10 h-10 rounded-xl glass backdrop-blur-sm flex items-center justify-center hover:glow-primary hover:text-primary transition-all duration-300 cursor-pointer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="absolute top-4 right-4 w-10 h-10 rounded-xl glass backdrop-blur-sm flex items-center justify-center hover:glow-primary hover:text-primary transition-all duration-300 cursor-pointer z-10"
                   >
                     <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                   </a>
@@ -223,6 +250,76 @@ const PortfolioSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Image Gallery Modal */}
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="max-w-4xl w-[95vw] p-0 bg-background/95 backdrop-blur-xl border-border/50 overflow-hidden">
+          <VisuallyHidden>
+            <DialogTitle>{selectedProject?.title || "Project Gallery"}</DialogTitle>
+          </VisuallyHidden>
+          {selectedProject && (
+            <div className="relative">
+              {/* Header */}
+              <div className="p-4 sm:p-6 border-b border-border/50">
+                <h3 className="text-lg sm:text-xl font-semibold font-display pr-8 text-foreground">
+                  {selectedProject.title}
+                </h3>
+                <span className="text-xs text-primary font-medium uppercase tracking-wider">
+                  {selectedProject.category}
+                </span>
+              </div>
+
+              {/* Carousel */}
+              <div className="p-4 sm:p-6">
+                <Carousel className="w-full">
+                  <CarouselContent>
+                    {selectedProject.gallery.map((image, index) => (
+                      <CarouselItem key={index}>
+                        <div className="relative aspect-video bg-[#1a1a1a] rounded-xl overflow-hidden">
+                          <img
+                            src={image}
+                            alt={`${selectedProject.title} - Image ${index + 1}`}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="left-2 bg-background/80 border-border hover:bg-background" />
+                  <CarouselNext className="right-2 bg-background/80 border-border hover:bg-background" />
+                </Carousel>
+
+                {/* Image counter */}
+                <div className="flex justify-center gap-2 mt-4">
+                  {selectedProject.gallery.map((_, index) => (
+                    <div
+                      key={index}
+                      className="w-2 h-2 rounded-full bg-muted-foreground/30"
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Footer with link */}
+              <div className="p-4 sm:p-6 border-t border-border/50 flex justify-between items-center">
+                <p className="text-sm text-muted-foreground">
+                  {selectedProject.gallery.length} images
+                </p>
+                {selectedProject.href !== "#" && (
+                  <a
+                    href={selectedProject.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm text-primary hover:underline"
+                  >
+                    View Project <ArrowUpRight className="w-4 h-4" />
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
