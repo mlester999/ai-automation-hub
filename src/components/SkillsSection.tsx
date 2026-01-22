@@ -11,6 +11,10 @@ const toolsRow1 = [
   { name: "ChatGPT", logo: "https://cdn.worldvectorlogo.com/logos/chatgpt-4.svg" },
   { name: "Claude", logo: "https://www.anthropic.com/favicon.ico" },
   { name: "Airtable", logo: "https://cdn.worldvectorlogo.com/logos/airtable-1.svg" },
+  { name: "OpenRouter", logo: "https://openrouter.ai/favicon.ico" },
+  { name: "Grok", logo: "https://x.ai/favicon.ico" },
+  { name: "Vapi", logo: "https://vapi.ai/favicon.ico" },
+  { name: "Gemini", logo: "https://www.gstatic.com/lamda/images/gemini_favicon_f069958c85030456e93de685481c559f160ea06b.png" },
 ];
 
 // Second row tools (different set)
@@ -23,6 +27,11 @@ const toolsRow2 = [
   { name: "Google Calendar", logo: "https://cdn.worldvectorlogo.com/logos/google-calendar-2020.svg" },
   { name: "Telegram", logo: "https://cdn.worldvectorlogo.com/logos/telegram-1.svg" },
   { name: "GoHighLevel", logo: "https://assets.cdn.filesafe.space/CbtJkQn3xgTyE1dYsCCn/media/65694b4a82f02211f4d80e8c.png" },
+  { name: "Asana", logo: "https://cdn.worldvectorlogo.com/logos/asana-logo.svg" },
+  { name: "Freepik", logo: "https://cdn.worldvectorlogo.com/logos/freepik.svg" },
+  { name: "Midjourney", logo: "https://cdn.worldvectorlogo.com/logos/midjourney.svg" },
+  { name: "Google Docs", logo: "https://cdn.worldvectorlogo.com/logos/google-docs-2020.svg" },
+  { name: "Google Sheets", logo: "https://cdn.worldvectorlogo.com/logos/google-sheets-2020-logo.svg" },
 ];
 
 const ToolCard = ({ tool }: { tool: { name: string; logo: string } }) => {
