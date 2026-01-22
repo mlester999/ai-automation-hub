@@ -7,7 +7,7 @@ const ContactSection = () => {
   const socialLinks = [
     { icon: Linkedin, href: "https://www.linkedin.com/in/mlester999", label: "LinkedIn" },
     { icon: Briefcase, href: "https://v2.onlinejobs.ph/jobseekers/info/1665967", label: "OnlineJobs.ph" },
-    { icon: Linkedin, href: "https://www.upwork.com/freelancers/marklesteracak", label: "Upwork" },
+    { icon: UpworkIcon, href: "https://www.upwork.com/freelancers/marklesteracak", label: "Upwork" },
     { icon: Mail, href: "mailto:mister6virgo@gmail.com", label: "Gmail" },
   ];
 
