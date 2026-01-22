@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import Marquee from "@/components/ui/marquee";
 import claudeLogo from "@/assets/claude-logo.png";
+import makeLogo from "@/assets/make-logo.png";
+import googleSheetsLogo from "@/assets/google-sheets-logo.png";
 // First row tools
 const toolsRow1 = [
-  { name: "Make.com", logo: "https://cdn.worldvectorlogo.com/logos/make-1.svg" },
+  { name: "Make.com", logo: makeLogo },
   { name: "Zapier", logo: "https://cdn.worldvectorlogo.com/logos/zapier-2.svg" },
   { name: "n8n", logo: "https://n8n.io/favicon.ico" },
   { name: "OpenAI", logo: "https://cdn.worldvectorlogo.com/logos/openai-2.svg" },
@@ -30,7 +32,7 @@ const toolsRow2 = [
   { name: "Freepik", logo: "https://cdn.worldvectorlogo.com/logos/freepik.svg" },
   { name: "Midjourney", logo: "https://cdn.worldvectorlogo.com/logos/midjourney.svg" },
   { name: "Google Docs", logo: "https://cdn.worldvectorlogo.com/logos/google-docs-2020.svg" },
-  { name: "Google Sheets", logo: "https://cdn.worldvectorlogo.com/logos/google-sheets-2020-logo.svg" },
+  { name: "Google Sheets", logo: googleSheetsLogo },
 ];
 
 const ToolCard = ({ tool }: { tool: { name: string; logo: string } }) => {
