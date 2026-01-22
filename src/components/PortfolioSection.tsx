@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Bot, ChevronLeft, ChevronRight, FileText, Mail, MessageSquare, Phone, X, Zap } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 // Import project images
@@ -116,6 +116,60 @@ const projects = [
 ];
 
 const categories = ["All", "AI Agents", "Workflow", "AI Automation", "Integration"];
+
+// Gallery Carousel with active dot indicator
+const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string }) => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
+  return (
+    <>
+      <Carousel className="w-full" setApi={setApi}>
+        <CarouselContent>
+          {gallery.map((image, index) => (
+            <CarouselItem key={index}>
+              <div className="relative aspect-video bg-[#1a1a1a] rounded-xl overflow-hidden">
+                <img
+                  src={image}
+                  alt={`${title} - Image ${index + 1}`}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="left-2 bg-background/80 border-border hover:bg-background" />
+        <CarouselNext className="right-2 bg-background/80 border-border hover:bg-background" />
+      </Carousel>
+
+      {/* Image counter with active indicator */}
+      <div className="flex justify-center gap-2 mt-4">
+        {gallery.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => api?.scrollTo(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              current === index
+                ? "bg-primary w-4"
+                : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+            }`}
+            aria-label={`Go to image ${index + 1}`}
+          />
+        ))}
+      </div>
+    </>
+  );
+};
 
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -271,33 +325,7 @@ const PortfolioSection = () => {
 
               {/* Carousel */}
               <div className="p-4 sm:p-6">
-                <Carousel className="w-full">
-                  <CarouselContent>
-                    {selectedProject.gallery.map((image, index) => (
-                      <CarouselItem key={index}>
-                        <div className="relative aspect-video bg-[#1a1a1a] rounded-xl overflow-hidden">
-                          <img
-                            src={image}
-                            alt={`${selectedProject.title} - Image ${index + 1}`}
-                            className="w-full h-full object-contain"
-                          />
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="left-2 bg-background/80 border-border hover:bg-background" />
-                  <CarouselNext className="right-2 bg-background/80 border-border hover:bg-background" />
-                </Carousel>
-
-                {/* Image counter */}
-                <div className="flex justify-center gap-2 mt-4">
-                  {selectedProject.gallery.map((_, index) => (
-                    <div
-                      key={index}
-                      className="w-2 h-2 rounded-full bg-muted-foreground/30"
-                    />
-                  ))}
-                </div>
+                <GalleryCarousel gallery={selectedProject.gallery} title={selectedProject.title} />
               </div>
 
               {/* Footer with link */}
