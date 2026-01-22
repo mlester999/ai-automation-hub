@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { Linkedin, Briefcase, Mail, Calendar } from "lucide-react";
 import { useEffect } from "react";
+import { UpworkIcon } from "./icons";
 
 const ContactSection = () => {
   const socialLinks = [
     { icon: Linkedin, href: "https://www.linkedin.com/in/mlester999", label: "LinkedIn" },
     { icon: Briefcase, href: "https://v2.onlinejobs.ph/jobseekers/info/1665967", label: "OnlineJobs.ph" },
-    { icon: Briefcase, href: "https://www.upwork.com/freelancers/marklesteracak", label: "Upwork" },
+    { icon: UpworkIcon, href: "https://www.upwork.com/freelancers/marklesteracak", label: "Upwork" },
     { icon: Mail, href: "mailto:mister6virgo@gmail.com", label: "Gmail" },
   ];
 
@@ -20,7 +21,7 @@ const ContactSection = () => {
     return () => {
       // Cleanup script on unmount
       const existingScript = document.querySelector(
-        'script[src="https://assets.calendly.com/assets/external/widget.js"]'
+        'script[src="https://assets.calendly.com/assets/external/widget.js"]',
       );
       if (existingScript) {
         existingScript.remove();
@@ -31,7 +32,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-24 relative bg-card/30">
       <div className="absolute inset-0 noise opacity-30" />
-      
+
       <div className="container px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
@@ -42,15 +43,13 @@ const ContactSection = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <span className="text-primary font-medium text-sm tracking-wider uppercase mb-4 block">
-              Get In Touch
-            </span>
+            <span className="text-primary font-medium text-sm tracking-wider uppercase mb-4 block">Get In Touch</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display mb-4">
               Let's Build Something <span className="text-gradient">Amazing</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Have a project in mind? I'd love to hear about it. Schedule a free consultation 
-              to discuss how AI automation can transform your business.
+              Have a project in mind? I'd love to hear about it. Schedule a free consultation to discuss how AI
+              automation can transform your business.
             </p>
           </motion.div>
 
@@ -85,8 +84,7 @@ const ContactSection = () => {
               <div className="glass rounded-2xl p-8">
                 <h3 className="text-xl font-semibold font-display mb-4">Connect With Me</h3>
                 <p className="text-muted-foreground mb-6">
-                  Follow me on social media or reach out directly via email. 
-                  I typically respond within 24 hours.
+                  Follow me on social media or reach out directly via email. I typically respond within 24 hours.
                 </p>
                 <div className="flex gap-4">
                   {socialLinks.map((link) => (
