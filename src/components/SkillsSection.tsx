@@ -8,12 +8,15 @@ import zapierLogo from "@/assets/zapier-logo.png";
 import googleDocsLogo from "@/assets/google-docs-logo.png";
 import airtableLogo from "@/assets/airtable-logo.png";
 import googleCalendarLogo from "@/assets/google-calendar-logo.png";
+import notionLogo from "@/assets/notion-logo.png";
+import openaiLogo from "@/assets/openai-logo.png";
 
 // First row tools
 const toolsRow1 = [
   { name: "Make.com", logo: makeLogo },
   { name: "Zapier", logo: zapierLogo },
   { name: "n8n", logo: "https://n8n.io/favicon.ico" },
+  { name: "OpenAI", logo: openaiLogo },
   { name: "OpenAI", logo: "https://cdn.worldvectorlogo.com/logos/openai-2.svg" },
   { name: "LangChain", logo: "https://avatars.githubusercontent.com/u/126733545?s=200&v=4" },
   { name: "Claude", logo: claudeLogo },
@@ -26,7 +29,7 @@ const toolsRow1 = [
 
 // Second row tools (different set)
 const toolsRow2 = [
-  { name: "Notion", logo: "https://cdn.worldvectorlogo.com/logos/notion-2.svg" },
+  { name: "Notion", logo: notionLogo },
   { name: "Slack", logo: "https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg" },
   { name: "HubSpot", logo: "https://cdn.worldvectorlogo.com/logos/hubspot-1.svg" },
   { name: "Stripe", logo: "https://cdn.worldvectorlogo.com/logos/stripe-4.svg" },
