@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { Facebook, Linkedin, Mail, MessageCircle, Calendar } from "lucide-react";
+import { Linkedin, Briefcase, Mail, Calendar } from "lucide-react";
 import { useEffect } from "react";
 
 const ContactSection = () => {
   const socialLinks = [
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-    { icon: MessageCircle, href: "https://wa.me/yourphonenumber", label: "WhatsApp" },
-    { icon: Mail, href: "mailto:hello@marklester.dev", label: "Gmail" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/mlester999", label: "LinkedIn" },
+    { icon: Briefcase, href: "https://v2.onlinejobs.ph/jobseekers/info/1665967", label: "OnlineJobs.ph" },
+    { icon: Briefcase, href: "https://www.upwork.com/freelancers/marklesteracak", label: "Upwork" },
+    { icon: Mail, href: "mailto:mister6virgo@gmail.com", label: "Gmail" },
   ];
 
   useEffect(() => {
