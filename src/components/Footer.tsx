@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Bot } from "lucide-react";
+import logoIcon from "@/assets/logo-icon.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -25,9 +25,7 @@ const Footer = () => {
               viewport={{ once: true }}
               className="flex items-center gap-2 text-xl font-bold font-display"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <Bot className="w-5 h-5 text-primary-foreground" />
-              </div>
+              <img src={logoIcon} alt="Logo" className="w-10 h-10 object-contain" />
               <span>Mark Lester</span>
             </motion.a>
 
