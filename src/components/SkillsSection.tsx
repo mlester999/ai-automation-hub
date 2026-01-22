@@ -44,16 +44,14 @@ const toolsRow2 = [
 const ToolCard = ({ tool }: { tool: { name: string; logo: string } }) => {
   return (
     <div className="flex items-center gap-3 glass px-5 py-3 rounded-xl hover:glow-primary transition-all duration-300 cursor-default min-w-fit">
-      <div className="w-8 h-8 rounded-md bg-white/90 flex items-center justify-center p-1">
-        <img
-          src={tool.logo}
-          alt={`${tool.name} logo`}
-          className="w-6 h-6 object-contain"
-          onError={(e) => {
-            e.currentTarget.style.display = 'none';
-          }}
-        />
-      </div>
+      <img
+        src={tool.logo}
+        alt={`${tool.name} logo`}
+        className="w-8 h-8 object-contain rounded"
+        onError={(e) => {
+          e.currentTarget.style.display = 'none';
+        }}
+      />
       <span className="text-sm font-medium whitespace-nowrap">{tool.name}</span>
     </div>
   );
