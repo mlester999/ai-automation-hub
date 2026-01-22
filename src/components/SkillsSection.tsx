@@ -10,6 +10,7 @@ import airtableLogo from "@/assets/airtable-logo.png";
 import googleCalendarLogo from "@/assets/google-calendar-logo.png";
 import notionLogo from "@/assets/notion-logo.png";
 import openaiLogo from "@/assets/openai-logo.png";
+import gohighlevelLogo from "@/assets/gohighlevel-logo.png";
 
 // First row tools
 const toolsRow1 = [
@@ -17,7 +18,6 @@ const toolsRow1 = [
   { name: "Zapier", logo: zapierLogo },
   { name: "n8n", logo: "https://n8n.io/favicon.ico" },
   { name: "OpenAI", logo: openaiLogo },
-  { name: "OpenAI", logo: "https://cdn.worldvectorlogo.com/logos/openai-2.svg" },
   { name: "LangChain", logo: "https://avatars.githubusercontent.com/u/126733545?s=200&v=4" },
   { name: "Claude", logo: claudeLogo },
   { name: "Airtable", logo: airtableLogo },
@@ -36,7 +36,8 @@ const toolsRow2 = [
   { name: "ElevenLabs", logo: "https://elevenlabs.io/favicon.ico" },
   { name: "Google Calendar", logo: googleCalendarLogo },
   { name: "Telegram", logo: "https://cdn.worldvectorlogo.com/logos/telegram-1.svg" },
-  { name: "GoHighLevel", logo: "https://assets.cdn.filesafe.space/CbtJkQn3xgTyE1dYsCCn/media/65694b4a82f02211f4d80e8c.png" },
+  { name: "GoHighLevel", logo: gohighlevelLogo },
+  { name: "WhatsApp", logo: "https://cdn.worldvectorlogo.com/logos/whatsapp-icon.svg" },
   { name: "Asana", logo: "https://cdn.worldvectorlogo.com/logos/asana-logo.svg" },
   { name: "Freepik", logo: "https://cdn.worldvectorlogo.com/logos/freepik.svg" },
   { name: "Midjourney", logo: midjourneyLogo },
