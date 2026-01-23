@@ -26,7 +26,7 @@ import mitchyDentalImg from "@/assets/project-mitchy-dental.png";
 const projects = [
   {
     id: 1,
-    title: "Hoop Shorts — Automation AI-Powered NBA Video Clipping and Shorts Automation",
+    title: "Hoop Shorts — AI-Powered NBA Video Clipping & Shorts Automation",
     description:
       "Built an AI-powered automated content system that generates optimized titles and descriptions, discovers long-form NBA videos with no existing Shorts, intelligently identifies and extracts high-impact moments, transforms them into engaging short-form videos, and automatically publishes across YouTube Shorts, Facebook Reels, and Instagram Reels.",
     problem: "High volume of repetitive customer questions overwhelming support team",
