@@ -15,6 +15,9 @@ import scarletEveImg from "@/assets/project-scarlet-eve.png";
 import expenseTrackingImg from "@/assets/project-expense-tracking.png";
 import chatbotImg from "@/assets/project-chatbot.png";
 import zappTechImg from "@/assets/project-zapp-tech.png";
+import zappTechFacebookImg from "@/assets/zapp-tech-facebook.png";
+import zappTechYoutubeImg from "@/assets/zapp-tech-youtube.png";
+import zappTechInstagramImg from "@/assets/zapp-tech-instagram.png";
 import mitchyDentalImg from "@/assets/project-mitchy-dental.png";
 
 const projects = [
@@ -100,7 +103,7 @@ const projects = [
     category: "AI Automation",
     href: "https://www.instagram.com/officialzapptech/",
     image: zappTechImg,
-    gallery: [zappTechImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    gallery: [zappTechImg, "/placeholder.svg", zappTechFacebookImg, zappTechYoutubeImg, zappTechInstagramImg],
   },
   {
     id: 7,
