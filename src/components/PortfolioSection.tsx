@@ -11,6 +11,7 @@ import hoopShortsYoutubeImg from "@/assets/hoop-shorts-youtube.png";
 import hoopShortsInstagramImg from "@/assets/hoop-shorts-instagram.png";
 import hoopShortsFacebookImg from "@/assets/hoop-shorts-facebook.png";
 import motivationTimepieceImg from "@/assets/project-motivation-timepiece.png";
+import motivationTimepieceChatImg from "@/assets/motivation-timepiece-chat.png";
 import scarletEveImg from "@/assets/project-scarlet-eve.png";
 import expenseTrackingImg from "@/assets/project-expense-tracking.png";
 import chatbotImg from "@/assets/project-chatbot.png";
@@ -47,7 +48,7 @@ const projects = [
     category: "Workflow",
     href: "https://www.facebook.com/motivation.timepiece/",
     image: motivationTimepieceImg,
-    gallery: [motivationTimepieceImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    gallery: [motivationTimepieceImg, "/placeholder.svg", "/placeholder.svg", motivationTimepieceChatImg, "/placeholder.svg"],
   },
   {
     id: 3,
