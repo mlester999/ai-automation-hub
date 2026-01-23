@@ -40,7 +40,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Motivation Timepiece — AI-Powered Motivational Quote Image Generation",
+    title: "Motivation Timepiece — AI Automation for Motivational Quote Image Generation",
     description:
       "This AI-powered automated workflow creates and publishes motivational content to Facebook without manual effort. It uses AI to generate quotes from famous motivational speakers, produces matching speaker visuals, adds the quote as text overlay on the image, and automatically uploads the final post to a Facebook page.",
     problem: "Sales team wasting time on unqualified leads",
