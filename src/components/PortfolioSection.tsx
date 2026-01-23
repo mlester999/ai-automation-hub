@@ -7,6 +7,7 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 // Import project images
 import hoopShortsImg from "@/assets/project-hoop-shorts.png";
+import hoopShortsYoutubeImg from "@/assets/hoop-shorts-youtube.png";
 import motivationTimepieceImg from "@/assets/project-motivation-timepiece.png";
 import scarletEveImg from "@/assets/project-scarlet-eve.png";
 import expenseTrackingImg from "@/assets/project-expense-tracking.png";
@@ -27,7 +28,7 @@ const projects = [
     category: "AI Automation",
     href: "https://www.youtube.com/@HoopShortsOfficial",
     image: hoopShortsImg,
-    gallery: [hoopShortsImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    gallery: [hoopShortsImg, "/placeholder.svg", hoopShortsYoutubeImg, "/placeholder.svg", "/placeholder.svg"],
   },
   {
     id: 2,
