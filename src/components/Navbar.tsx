@@ -48,7 +48,7 @@ const Navbar = () => {
             </a>
 
             {/* Mobile/Tablet Center Brand */}
-            <span className="md:hidden text-sm font-bold font-display text-center flex-1">
+            <span className="md:hidden text-xs sm:text-sm font-bold font-display text-center flex-1 whitespace-nowrap">
               Automate with Marky
             </span>
 
