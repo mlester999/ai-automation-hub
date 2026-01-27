@@ -189,8 +189,8 @@ const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string 
                     <>
                       {/* Loading spinner */}
                       {loadingVideos.has(index) && (
-                        <div className="absolute inset-0 flex items-center justify-center z-10">
-                          <div className="w-10 h-10 border-3 border-primary/30 border-t-primary rounded-full animate-spin" />
+                        <div className="absolute inset-0 flex items-center justify-center z-10 bg-[#1a1a1a]">
+                          <div className="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin" />
                         </div>
                       )}
                       <iframe
