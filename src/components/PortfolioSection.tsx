@@ -37,7 +37,7 @@ const projects = [
     category: "AI Automation",
     href: "https://www.youtube.com/@HoopShortsOfficial",
     image: hoopShortsImg,
-    gallery: [hoopShortsImg, "/placeholder.svg", hoopShortsYoutubeImg, hoopShortsInstagramImg, hoopShortsFacebookImg],
+    gallery: [hoopShortsImg, "loom:2620d8f7a3f844a28ca8690348c41da6", hoopShortsYoutubeImg, hoopShortsInstagramImg, hoopShortsFacebookImg],
   },
   {
     id: 2,
