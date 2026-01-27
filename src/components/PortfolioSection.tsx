@@ -168,13 +168,25 @@ const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string 
             <CarouselItem key={index}>
               <div className="relative aspect-video bg-[#1a1a1a] rounded-xl overflow-hidden">
                 {isLoomVideo(item) ? (
-                  <iframe
-                    src={`https://www.loom.com/embed/${getLoomId(item)}`}
-                    frameBorder="0"
-                    allowFullScreen
-                    className="w-full h-full"
-                    title={`${title} - Video ${index + 1}`}
-                  />
+                  // Only render iframe when it's the active slide to pause on navigation
+                  current === index ? (
+                    <iframe
+                      src={`https://www.loom.com/embed/${getLoomId(item)}`}
+                      frameBorder="0"
+                      allowFullScreen
+                      className="w-full h-full"
+                      title={`${title} - Video ${index + 1}`}
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="text-center text-muted-foreground">
+                        <div className="w-16 h-16 mx-auto mb-2 rounded-full bg-primary/20 flex items-center justify-center">
+                          <div className="w-0 h-0 border-l-[12px] border-l-primary border-y-[8px] border-y-transparent ml-1" />
+                        </div>
+                        <span className="text-sm">Video</span>
+                      </div>
+                    </div>
+                  )
                 ) : (
                   <img
                     src={item}
