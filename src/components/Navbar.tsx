@@ -44,7 +44,7 @@ const Navbar = () => {
             {/* Logo */}
             <a href="#" className="flex items-center gap-2 text-xl font-bold font-display">
               <img src={logoIcon} alt="Logo" className="w-10 h-10 object-contain" />
-              <span className="hidden sm:inline">Mark Lester</span>
+              <span className="hidden sm:inline">Automate with Marky</span>
             </a>
 
             {/* Desktop Nav */}
