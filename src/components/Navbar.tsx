@@ -49,7 +49,7 @@ const Navbar = () => {
 
             {/* Mobile/Tablet Center Brand */}
             <span className="md:hidden text-xs sm:text-sm font-bold font-display text-center flex-1 whitespace-nowrap">
-              Automate with Marky
+              Automate with <span className="text-gradient">Marky</span>
             </span>
 
             {/* Desktop Nav */}
