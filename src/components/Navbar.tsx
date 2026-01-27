@@ -44,7 +44,7 @@ const Navbar = () => {
             {/* Logo - Left */}
             <a href="#" className="flex items-center gap-2 text-xl font-bold font-display md:flex-none flex-1">
               <img src={logoIcon} alt="Logo" className="w-10 h-10 object-contain" />
-              <span className="hidden md:inline">Automate with <span className="text-gradient">Marky</span></span>
+              <span className="hidden md:inline uppercase">Automate with <span className="text-gradient">Marky</span></span>
             </a>
 
             {/* Mobile/Tablet Center Brand */}
