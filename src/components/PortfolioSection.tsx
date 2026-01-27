@@ -145,6 +145,7 @@ const categories = ["All", "AI Agents", "Workflow", "AI Automation", "Integratio
 const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string }) => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const [loadingVideos, setLoadingVideos] = useState<Set<number>>(new Set());
 
   useEffect(() => {
     if (!api) return;
@@ -160,6 +161,21 @@ const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string 
   const isLoomVideo = (item: string) => item.startsWith("loom:");
   const getLoomId = (item: string) => item.replace("loom:", "");
 
+  const handleVideoLoad = (index: number) => {
+    setLoadingVideos(prev => {
+      const next = new Set(prev);
+      next.delete(index);
+      return next;
+    });
+  };
+
+  // Set loading state when a video slide becomes active
+  useEffect(() => {
+    if (isLoomVideo(gallery[current]) && !loadingVideos.has(current)) {
+      setLoadingVideos(prev => new Set(prev).add(current));
+    }
+  }, [current, gallery]);
+
   return (
     <>
       <Carousel className="w-full" setApi={setApi}>
@@ -170,13 +186,22 @@ const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string 
                 {isLoomVideo(item) ? (
                   // Only render iframe when it's the active slide to pause on navigation
                   current === index ? (
-                    <iframe
-                      src={`https://www.loom.com/embed/${getLoomId(item)}`}
-                      frameBorder="0"
-                      allowFullScreen
-                      className="w-full h-full"
-                      title={`${title} - Video ${index + 1}`}
-                    />
+                    <>
+                      {/* Loading spinner */}
+                      {loadingVideos.has(index) && (
+                        <div className="absolute inset-0 flex items-center justify-center z-10">
+                          <div className="w-10 h-10 border-3 border-primary/30 border-t-primary rounded-full animate-spin" />
+                        </div>
+                      )}
+                      <iframe
+                        src={`https://www.loom.com/embed/${getLoomId(item)}`}
+                        frameBorder="0"
+                        allowFullScreen
+                        className={`w-full h-full transition-opacity duration-300 ${loadingVideos.has(index) ? 'opacity-0' : 'opacity-100'}`}
+                        title={`${title} - Video ${index + 1}`}
+                        onLoad={() => handleVideoLoad(index)}
+                      />
+                    </>
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
                       <div className="text-center text-muted-foreground">
