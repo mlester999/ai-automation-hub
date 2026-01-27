@@ -48,7 +48,7 @@ const Navbar = () => {
             </a>
 
             {/* Mobile/Tablet Center Brand */}
-            <span className="md:hidden text-xs sm:text-sm font-bold font-display text-center flex-1 whitespace-nowrap uppercase">
+            <span className="md:hidden text-xs sm:text-base font-bold font-display text-center flex-1 whitespace-nowrap uppercase">
               Automate with <span className="text-gradient">Marky</span>
             </span>
 
