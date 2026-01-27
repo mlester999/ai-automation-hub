@@ -34,7 +34,7 @@ const projects = [
     tools: ["n8n", "OpenAI", "Klap AI", "Meta", "YouTube"],
     results: "90% reduction in manual editing work, 5–10 times faster content production",
     icon: Zap,
-    category: "n8n",
+    categories: ["AI Automation", "n8n"],
     href: "https://www.youtube.com/@HoopShortsOfficial",
     image: hoopShortsImg,
     gallery: [hoopShortsImg, "loom:2620d8f7a3f844a28ca8690348c41da6", hoopShortsYoutubeImg, hoopShortsInstagramImg, hoopShortsFacebookImg],
@@ -48,7 +48,7 @@ const projects = [
     tools: ["Midjourney", "Airtable", "n8n", "Facebook", "Meta"],
     results: "Zero manual quote research, 100% automated posting",
     icon: FileText,
-    category: "n8n",
+    categories: ["Workflow", "n8n"],
     href: "https://www.facebook.com/motivation.timepiece/",
     image: motivationTimepieceImg,
     gallery: [motivationTimepieceImg, "/placeholder.svg", motivationTimepieceFacebookImg, motivationTimepieceChatImg, motivationTimepieceQuoteImg],
@@ -62,7 +62,7 @@ const projects = [
     tools: ["Make", "Xero", "Google Sheets", "Asana"],
     results: "80% reduction in accounting data entry time",
     icon: FileText,
-    category: "Make.com",
+    categories: ["Workflow", "Make.com"],
     href: "https://www.loom.com/share/e3eefdc6c2484272a1bfd7233a969db8",
     image: xeroAsanaImg,
     gallery: [xeroAsanaImg, "loom:e3eefdc6c2484272a1bfd7233a969db8", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
@@ -76,7 +76,7 @@ const projects = [
     tools: ["n8n", "Telegram", "Midjourney", "X", "OpenAI"],
     results: "Instant image variations, consistent anime-style results",
     icon: Bot,
-    category: "n8n",
+    categories: ["AI Agents", "n8n"],
     href: "https://t.me/ScarletEveAIBot",
     image: scarletEveImg,
     gallery: [scarletEveImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
@@ -90,7 +90,7 @@ const projects = [
     tools: ["Notion", "n8n", "Telegram", "Gmail", "OpenAI"],
     results: "Zero missed entries, real-time expense tracking",
     icon: MessageSquare,
-    category: "n8n",
+    categories: ["Workflow", "n8n"],
     href: "https://t.me/MarkyExpenseBot",
     image: expenseTrackingImg,
     gallery: [expenseTrackingImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
@@ -104,7 +104,7 @@ const projects = [
     tools: ["Meta", "n8n", "Google", "Stripe"],
     results: "24/7 automated guest support and booking assistance",
     icon: Mail,
-    category: "n8n",
+    categories: ["AI Agents", "Integration", "n8n"],
     href: "https://www.facebook.com/cavinti.suite/",
     image: chatbotImg,
     gallery: [chatbotImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
@@ -118,7 +118,7 @@ const projects = [
     tools: ["OpenAI", "Klap AI", "n8n", "OneDrive", "Meta", "YouTube"],
     results: "AI-selected viral moments, multi-platform auto posting",
     icon: Zap,
-    category: "n8n",
+    categories: ["AI Automation", "n8n"],
     href: "https://www.instagram.com/officialzapptech/",
     image: zappTechImg,
     gallery: [zappTechImg, "/placeholder.svg", zappTechFacebookImg, zappTechYoutubeImg, zappTechInstagramImg],
@@ -132,14 +132,14 @@ const projects = [
     tools: ["n8n", "ElevenLabs", "Google Calendar", "OpenAI", "Airtable"],
     results: "24/7 automated appointment scheduling, zero missed bookings",
     icon: Phone,
-    category: "n8n",
+    categories: ["AI Agents", "n8n"],
     href: "#",
     image: mitchyDentalImg,
     gallery: [mitchyDentalImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
 ];
 
-const categories = ["All", "n8n", "Make.com"];
+const categories = ["All", "AI Agents", "Workflow", "AI Automation", "Integration", "n8n", "Make.com"];
 
 // Gallery Carousel with active dot indicator
 const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string }) => {
@@ -251,7 +251,7 @@ const PortfolioSection = () => {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const filteredProjects = activeCategory === "All" ? projects : projects.filter((p) => p.category === activeCategory);
+  const filteredProjects = activeCategory === "All" ? projects : projects.filter((p) => p.categories.includes(activeCategory));
 
   const handleImageClick = (project: typeof projects[0]) => {
     setSelectedProject(project);
@@ -350,7 +350,7 @@ const PortfolioSection = () => {
                 </div>
 
                 <div className="p-6">
-                  <span className="text-xs text-primary font-medium uppercase tracking-wider">{project.category}</span>
+                  <span className="text-xs text-primary font-medium uppercase tracking-wider">{project.categories.join(" • ")}</span>
 
                   <h3 className="text-xl font-semibold font-display mt-2 mb-3 group-hover:text-primary transition-colors">
                     {project.title}
@@ -394,7 +394,7 @@ const PortfolioSection = () => {
                   {selectedProject.title}
                 </h3>
                 <span className="text-xs text-primary font-medium uppercase tracking-wider">
-                  {selectedProject.category}
+                  {selectedProject.categories.join(" • ")}
                 </span>
               </div>
 
