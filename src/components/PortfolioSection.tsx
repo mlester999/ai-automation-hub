@@ -332,8 +332,8 @@ const PortfolioSection = () => {
                       <project.icon className="w-5 h-5 text-primary" />
                     </div>
                   </div>
-                  {/* Click hint */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  {/* Click hint - always visible on touch devices, hover on desktop */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-100 md:opacity-0 md:group-hover/image:opacity-100 transition-opacity duration-300 pointer-events-none">
                     <span className="px-4 py-2 rounded-full glass text-sm font-medium text-primary">
                       Click to view gallery
                     </span>
