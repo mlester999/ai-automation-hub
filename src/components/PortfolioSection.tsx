@@ -22,6 +22,7 @@ import zappTechFacebookImg from "@/assets/zapp-tech-facebook.png";
 import zappTechYoutubeImg from "@/assets/zapp-tech-youtube.png";
 import zappTechInstagramImg from "@/assets/zapp-tech-instagram.png";
 import mitchyDentalImg from "@/assets/project-mitchy-dental.png";
+import xeroAsanaImg from "@/assets/project-xero-asana.png";
 
 const projects = [
   {
@@ -63,8 +64,8 @@ const projects = [
     icon: FileText,
     category: "Workflow",
     href: "https://www.loom.com/share/e3eefdc6c2484272a1bfd7233a969db8",
-    image: "/placeholder.svg",
-    gallery: ["/placeholder.svg", "loom:e3eefdc6c2484272a1bfd7233a969db8", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    image: xeroAsanaImg,
+    gallery: [xeroAsanaImg, "loom:e3eefdc6c2484272a1bfd7233a969db8", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
   {
     id: 4,
