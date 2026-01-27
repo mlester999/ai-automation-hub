@@ -41,11 +41,16 @@ const Navbar = () => {
         
         <div className="container px-4 sm:px-6 relative z-10">
           <div className="max-w-6xl mx-auto flex items-center justify-between">
-            {/* Logo */}
-            <a href="#" className="flex items-center gap-2 text-xl font-bold font-display">
+            {/* Logo - Left */}
+            <a href="#" className="flex items-center gap-2 text-xl font-bold font-display md:flex-none flex-1">
               <img src={logoIcon} alt="Logo" className="w-10 h-10 object-contain" />
-              <span className="hidden sm:inline">Automate with Marky</span>
+              <span className="hidden md:inline">Automate with Marky</span>
             </a>
+
+            {/* Mobile/Tablet Center Brand */}
+            <span className="md:hidden text-sm font-bold font-display text-center flex-1">
+              Automate with Marky
+            </span>
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-8">
@@ -62,8 +67,8 @@ const Navbar = () => {
             </nav>
 
             {/* CTA + Mobile Menu */}
-            <div className="flex items-center gap-4">
-              <Button variant="default" size="sm" asChild className="hidden sm:inline-flex">
+            <div className="flex items-center gap-4 md:flex-none flex-1 justify-end">
+              <Button variant="default" size="sm" asChild className="hidden md:inline-flex">
                 <a href="#contact">Let's Talk</a>
               </Button>
               
