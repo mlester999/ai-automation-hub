@@ -54,6 +54,20 @@ const projects = [
   },
   {
     id: 3,
+    title: "Automated Accounting Workflow — Xero to Google Sheets & Asana",
+    description:
+      "Built an automated accounting workflow using Make.com that extracts account transactions from Xero, processes the data through an iterator, and routes it to Google Sheets for reporting and Asana for task management — eliminating manual data entry and ensuring real-time financial tracking.",
+    problem: "Manual accounting data entry consuming hours weekly",
+    tools: ["Make", "Xero", "Google Sheets", "Asana"],
+    results: "80% reduction in accounting data entry time",
+    icon: FileText,
+    category: "Workflow",
+    href: "https://www.loom.com/share/e3eefdc6c2484272a1bfd7233a969db8",
+    image: "/placeholder.svg",
+    gallery: ["/placeholder.svg", "loom:e3eefdc6c2484272a1bfd7233a969db8", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+  },
+  {
+    id: 4,
     title: "Scarlet Eve AI — Christmas Anime Companion for AI Image Creation",
     description:
       "A Christmas-themed anime waifu AI agent available on Telegram, designed to guide users through a cozy and magical AI image creation experience. Users can chat naturally or use simple commands to generate anime-style images filled with winter charm and holiday sparkle. It allows full customization of image results, including expressions, emotions, poses, outfits, and companions. ",
@@ -67,7 +81,7 @@ const projects = [
     gallery: [scarletEveImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
   {
-    id: 4,
+    id: 5,
     title: "AI Expense Tracking & Budgeting Workflow",
     description:
       "Made an automated expense tracking system that records daily expenses directly from Telegram into Notion in real time. Eliminates manual logging, reduces tracking errors, and provides a centralized, always-updated view of personal or business finances — enabling faster budgeting decisions with zero manual input.",
@@ -81,7 +95,7 @@ const projects = [
     gallery: [expenseTrackingImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Cavinti Suite — AI Support Agent Chatbot Integration",
     description:
       "Made an intelligent automated messaging chatbot for an Airbnb property called Cavinti Suite in Cavinti, Laguna, Philippines. It responds to guest inquiries, handles booking questions, manages appointment scheduling, provides property information, and assists with check-in/check-out details — all available 24/7 without manual intervention.",
@@ -95,7 +109,7 @@ const projects = [
     gallery: [chatbotImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
   {
-    id: 6,
+    id: 7,
     title: "Zapp Tech — AI Automation for Tech Content Repurposing",
     description:
       "An AI-powered content automation system that transforms long-form tech videos—such as smartphone, smartwatch, and high-tech reviews—into engaging, social-media-ready shorts. Automatically identifies the best moments, formats clips for YouTube Shorts, Facebook, and Instagram, and publishes them with zero manual editing.",
@@ -109,7 +123,7 @@ const projects = [
     gallery: [zappTechImg, "/placeholder.svg", zappTechFacebookImg, zappTechYoutubeImg, zappTechInstagramImg],
   },
   {
-    id: 7,
+    id: 8,
     title: "Mitchy Dental Lounge — AI Voice Receptionist",
     description:
       "Built an AI-powered voice receptionist for Mitchy Dental Lounge that handles appointment scheduling, slot availability checks, booking confirmations, and appointment updates — all through natural voice conversations. Integrates with Google Calendar for real-time availability and automated booking management.",
@@ -141,18 +155,32 @@ const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string 
     });
   }, [api]);
 
+  // Check if item is a Loom video (format: "loom:VIDEO_ID")
+  const isLoomVideo = (item: string) => item.startsWith("loom:");
+  const getLoomId = (item: string) => item.replace("loom:", "");
+
   return (
     <>
       <Carousel className="w-full" setApi={setApi}>
         <CarouselContent>
-          {gallery.map((image, index) => (
+          {gallery.map((item, index) => (
             <CarouselItem key={index}>
               <div className="relative aspect-video bg-[#1a1a1a] rounded-xl overflow-hidden">
-                <img
-                  src={image}
-                  alt={`${title} - Image ${index + 1}`}
-                  className="w-full h-full object-contain"
-                />
+                {isLoomVideo(item) ? (
+                  <iframe
+                    src={`https://www.loom.com/embed/${getLoomId(item)}`}
+                    frameBorder="0"
+                    allowFullScreen
+                    className="w-full h-full"
+                    title={`${title} - Video ${index + 1}`}
+                  />
+                ) : (
+                  <img
+                    src={item}
+                    alt={`${title} - Image ${index + 1}`}
+                    className="w-full h-full object-contain"
+                  />
+                )}
               </div>
             </CarouselItem>
           ))}
