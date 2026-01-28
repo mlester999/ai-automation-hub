@@ -6,7 +6,7 @@ const Footer = () => {
 
   const navLinks = [
     { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
+    { label: "Tools", href: "#tools" },
     { label: "Portfolio", href: "#portfolio" },
     { label: "Services", href: "#services" },
     { label: "Contact", href: "#contact" },
@@ -26,7 +26,9 @@ const Footer = () => {
               className="flex items-center gap-2 text-xl font-bold font-display"
             >
               <img src={logoIcon} alt="Logo" className="w-10 h-10 object-contain" />
-              <span className="uppercase">Automate with <span className="text-gradient">Marky</span></span>
+              <span className="uppercase">
+                Automate with <span className="text-gradient">Marky</span>
+              </span>
             </motion.a>
 
             {/* Nav Links */}
@@ -43,9 +45,7 @@ const Footer = () => {
             </nav>
 
             {/* Copyright */}
-            <p className="text-sm text-muted-foreground">
-              © {currentYear} Mark Lester Acak
-            </p>
+            <p className="text-sm text-muted-foreground">© {currentYear} Mark Lester Acak</p>
           </div>
         </div>
       </div>

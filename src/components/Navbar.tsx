@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { scrollY } = useScroll();
-  
+
   const navOpacity = useTransform(scrollY, [0, 100], [0, 1]);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const Navbar = () => {
 
   const navLinks = [
     { label: "About", href: "#about" },
-    { label: "Tools", href: "#skills" },
+    { label: "Tools", href: "#tools" },
     { label: "Portfolio", href: "#portfolio" },
     { label: "Services", href: "#services" },
     { label: "Testimonials", href: "#testimonials" },
@@ -30,21 +30,18 @@ const Navbar = () => {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "py-3" : "py-5"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "py-3" : "py-5"}`}
       >
-        <motion.div
-          style={{ opacity: navOpacity }}
-          className="absolute inset-0 glass"
-        />
-        
+        <motion.div style={{ opacity: navOpacity }} className="absolute inset-0 glass" />
+
         <div className="container px-4 sm:px-6 relative z-10">
           <div className="max-w-6xl mx-auto flex items-center justify-between">
             {/* Logo - Left */}
             <a href="#" className="flex items-center gap-2 text-xl font-bold font-display md:flex-none flex-1">
               <img src={logoIcon} alt="Logo" className="w-10 h-10 object-contain" />
-              <span className="hidden md:inline uppercase">Automate with <span className="text-gradient">Marky</span></span>
+              <span className="hidden md:inline uppercase">
+                Automate with <span className="text-gradient">Marky</span>
+              </span>
             </a>
 
             {/* Mobile/Tablet Center Brand */}
@@ -71,7 +68,7 @@ const Navbar = () => {
               <Button variant="default" size="sm" asChild className="hidden md:inline-flex">
                 <a href="#contact">Let's Talk</a>
               </Button>
-              
+
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="md:hidden w-10 h-10 flex items-center justify-center"
