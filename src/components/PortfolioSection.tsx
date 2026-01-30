@@ -25,6 +25,9 @@ import mitchyDentalImg from "@/assets/project-mitchy-dental.png";
 import xeroAsanaImg from "@/assets/project-xero-asana.png";
 import markoBarDealImg from "@/assets/project-marko-bar-deal.png";
 import aiContentRepurposingImg from "@/assets/project-ai-content-repurposing.png";
+import aiContentRepurposing1Img from "@/assets/ai-content-repurposing-1.png";
+import aiContentRepurposing2Img from "@/assets/ai-content-repurposing-2.png";
+import aiContentRepurposing3Img from "@/assets/ai-content-repurposing-3.png";
 
 const projects = [
   {
@@ -165,7 +168,7 @@ const projects = [
     categories: ["AI Automation", "Zapier"],
     href: "#",
     image: aiContentRepurposingImg,
-    gallery: [aiContentRepurposingImg, "loom:1f56653be907400eb5ff77f54a1ba677", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    gallery: [aiContentRepurposingImg, "loom:1f56653be907400eb5ff77f54a1ba677", aiContentRepurposing1Img, aiContentRepurposing2Img, aiContentRepurposing3Img],
   },
 ];
 
