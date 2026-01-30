@@ -137,9 +137,37 @@ const projects = [
     image: mitchyDentalImg,
     gallery: [mitchyDentalImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
+  {
+    id: 9,
+    title: "Marko Bar Deal Automation — Automated Sales Pipeline with PandaDoc & Slack",
+    description:
+      "Built an automated deal workflow using Zapier that triggers when Airtable records reach 'Closed Won' status, automatically generates and sends PandaDoc contracts, notifies the team via Slack on success or failure, formats dates, creates onboarding tasks, and updates records — all without manual intervention.",
+    problem: "Manual deal processing causing delays in contract delivery and onboarding",
+    tools: ["Zapier", "Airtable", "PandaDoc", "Slack"],
+    results: "Instant contract generation, real-time team notifications",
+    icon: FileText,
+    categories: ["Workflow", "Zapier"],
+    href: "#",
+    image: "/placeholder.svg",
+    gallery: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+  },
+  {
+    id: 10,
+    title: "AI Content Repurposing — Multi-Platform Social Media Automation",
+    description:
+      "Created an AI-powered content repurposing automation using Zapier that monitors Google Drive for new video files, filters for .mp4 extensions, extracts content using AI, analyzes and returns structured data, loops through line items, and automatically distributes content to Facebook Pages and LinkedIn based on conditional paths.",
+    problem: "Content team spending hours manually repurposing videos for different platforms",
+    tools: ["Zapier", "Google Drive", "Facebook", "LinkedIn", "OpenAI"],
+    results: "Zero-touch content distribution, multi-platform publishing",
+    icon: Zap,
+    categories: ["AI Automation", "Zapier"],
+    href: "#",
+    image: "/placeholder.svg",
+    gallery: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+  },
 ];
 
-const categories = ["All", "AI Agents", "Workflow", "AI Automation", "Integration", "n8n", "Make.com"];
+const categories = ["All", "AI Agents", "Workflow", "AI Automation", "Integration", "n8n", "Make.com", "Zapier"];
 
 // Gallery Carousel with active dot indicator
 const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string }) => {
