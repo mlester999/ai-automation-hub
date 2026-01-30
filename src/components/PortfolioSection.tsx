@@ -23,6 +23,8 @@ import zappTechYoutubeImg from "@/assets/zapp-tech-youtube.png";
 import zappTechInstagramImg from "@/assets/zapp-tech-instagram.png";
 import mitchyDentalImg from "@/assets/project-mitchy-dental.png";
 import xeroAsanaImg from "@/assets/project-xero-asana.png";
+import markoBarDealImg from "@/assets/project-marko-bar-deal.png";
+import aiContentRepurposingImg from "@/assets/project-ai-content-repurposing.png";
 
 const projects = [
   {
@@ -148,8 +150,8 @@ const projects = [
     icon: FileText,
     categories: ["Workflow", "Zapier"],
     href: "#",
-    image: "/placeholder.svg",
-    gallery: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    image: markoBarDealImg,
+    gallery: [markoBarDealImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
   {
     id: 10,
@@ -162,8 +164,8 @@ const projects = [
     icon: Zap,
     categories: ["AI Automation", "Zapier"],
     href: "#",
-    image: "/placeholder.svg",
-    gallery: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    image: aiContentRepurposingImg,
+    gallery: [aiContentRepurposingImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
 ];
 
