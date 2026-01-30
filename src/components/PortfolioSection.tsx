@@ -165,7 +165,7 @@ const projects = [
     categories: ["AI Automation", "Zapier"],
     href: "#",
     image: aiContentRepurposingImg,
-    gallery: [aiContentRepurposingImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    gallery: [aiContentRepurposingImg, "loom:1f56653be907400eb5ff77f54a1ba677", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
 ];
 
