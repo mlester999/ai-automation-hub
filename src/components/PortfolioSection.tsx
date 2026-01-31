@@ -30,6 +30,7 @@ import aiContentRepurposing2Img from "@/assets/ai-content-repurposing-2.png";
 import aiContentRepurposing3Img from "@/assets/ai-content-repurposing-3.png";
 import expenseTracker3Img from "@/assets/expense-tracker-3.png";
 import expenseTracker4Img from "@/assets/expense-tracker-4.jpeg";
+import expenseTracker5Img from "@/assets/expense-tracker-5.png";
 
 const projects = [
   {
@@ -100,7 +101,7 @@ const projects = [
     categories: ["Workflow", "n8n"],
     href: "https://t.me/MarkyExpenseBot",
     image: expenseTrackingImg,
-    gallery: [expenseTrackingImg, "/placeholder.svg", expenseTracker3Img, expenseTracker4Img, "/placeholder.svg"],
+    gallery: [expenseTrackingImg, "/placeholder.svg", expenseTracker3Img, expenseTracker4Img, expenseTracker5Img],
   },
   {
     id: 6,
