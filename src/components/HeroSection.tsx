@@ -1,4 +1,4 @@
- import { useState } from "react";
+ import { useState, useEffect } from "react";
  import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
  import { ArrowRight, MapPin, User } from "lucide-react";
@@ -6,6 +6,17 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
    const [imageLoaded, setImageLoaded] = useState(false);
+ 
+   useEffect(() => {
+     const img = new Image();
+     img.src = markPhoto;
+     img.decode().then(() => {
+       setImageLoaded(true);
+     }).catch(() => {
+       // Fallback if decode fails
+       setImageLoaded(true);
+     });
+   }, []);
  
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden py-24 lg:py-0">
@@ -54,8 +65,6 @@ const HeroSection = () => {
                 <img
                   src={markPhoto}
                   alt="Mark Lester Acak"
-                  loading="lazy"
-                  onLoad={() => setImageLoaded(true)}
                   className={`w-full h-full object-cover object-center transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                 />
                 {/* Overlay gradient for better blending */}
