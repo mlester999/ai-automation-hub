@@ -56,7 +56,7 @@ const HeroSection = () => {
                   alt="Mark Lester Acak"
                   loading="lazy"
                   onLoad={() => setImageLoaded(true)}
-                  className={`w-full h-full object-cover object-top transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                  className={`w-full h-full object-cover object-center transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                 />
                 {/* Overlay gradient for better blending */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
