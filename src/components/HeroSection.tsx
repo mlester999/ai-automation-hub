@@ -39,8 +39,15 @@ const HeroSection = () => {
                  {/* Loading indicator */}
                  {!imageLoaded && (
                    <div className="absolute inset-0 flex items-center justify-center bg-background/80">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-muted/50 flex items-center justify-center animate-pulse">
-                      <User className="w-8 h-8 sm:w-10 sm:h-10 text-primary/60" />
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-muted/50 flex items-center justify-center animate-pulse">
+                        <User className="w-8 h-8 sm:w-10 sm:h-10 text-primary/60" />
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary animate-bounce" style={{ animationDelay: "0ms" }} />
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary animate-bounce" style={{ animationDelay: "150ms" }} />
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary animate-bounce" style={{ animationDelay: "300ms" }} />
+                      </div>
                     </div>
                    </div>
                  )}
