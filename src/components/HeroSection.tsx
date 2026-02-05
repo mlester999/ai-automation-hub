@@ -1,34 +1,40 @@
- import { useState, useEffect } from "react";
- import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
- import { ArrowRight, MapPin } from "lucide-react";
- import markPhoto from "@/assets/mark-photo.png";
+import { ArrowRight, MapPin } from "lucide-react";
+import markPhoto from "@/assets/mark-photo.png";
 
 const HeroSection = () => {
-   const [imageLoaded, setImageLoaded] = useState(false);
- 
-   useEffect(() => {
-     const img = new Image();
-     img.src = markPhoto;
-     img.decode().then(() => {
-       setImageLoaded(true);
-     }).catch(() => {
-       // Fallback if decode fails
-       setImageLoaded(true);
-     });
-   }, []);
- 
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = markPhoto;
+    img
+      .decode()
+      .then(() => {
+        setImageLoaded(true);
+      })
+      .catch(() => {
+        // Fallback if decode fails
+        setImageLoaded(true);
+      });
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden py-24 lg:py-0">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-hero" />
       <div className="absolute inset-0 bg-gradient-radial" />
       <div className="absolute inset-0 noise opacity-50" />
-      
+
       {/* Floating orbs - smaller on mobile */}
       <div className="absolute top-1/4 left-1/4 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
-      <div className="absolute bottom-1/4 right-1/4 w-40 sm:w-60 lg:w-80 h-40 sm:h-60 lg:h-80 bg-accent/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
-      
+      <div
+        className="absolute bottom-1/4 right-1/4 w-40 sm:w-60 lg:w-80 h-40 sm:h-60 lg:h-80 bg-accent/20 rounded-full blur-3xl animate-pulse-glow"
+        style={{ animationDelay: "1.5s" }}
+      />
+
       <div className="container relative z-10 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
@@ -47,25 +53,32 @@ const HeroSection = () => {
 
               {/* Photo container */}
               <div className="absolute inset-4 sm:inset-6 md:inset-8 rounded-full overflow-hidden border-4 border-primary/60 shadow-[0_0_40px_rgba(34,211,238,0.4)] sm:shadow-[0_0_60px_rgba(34,211,238,0.4)]">
-                 {/* Loading indicator */}
-                 {!imageLoaded && (
-                   <div className="absolute inset-0 flex items-center justify-center bg-background/80">
+                {/* Loading indicator */}
+                {!imageLoaded && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-background/80">
                     <div className="flex flex-col items-center gap-3">
-                      <div className="text-4xl sm:text-5xl animate-pulse">
-                        😴
-                      </div>
+                      <div className="text-4xl sm:text-5xl animate-pulse">😴</div>
                       <div className="flex items-center gap-1.5">
-                        <div className="w-2 h-2 rounded-full bg-primary animate-bounce" style={{ animationDelay: "0ms" }} />
-                        <div className="w-2 h-2 rounded-full bg-primary animate-bounce" style={{ animationDelay: "150ms" }} />
-                        <div className="w-2 h-2 rounded-full bg-primary animate-bounce" style={{ animationDelay: "300ms" }} />
+                        <div
+                          className="w-2 h-2 rounded-full bg-primary animate-bounce"
+                          style={{ animationDelay: "0ms" }}
+                        />
+                        <div
+                          className="w-2 h-2 rounded-full bg-primary animate-bounce"
+                          style={{ animationDelay: "150ms" }}
+                        />
+                        <div
+                          className="w-2 h-2 rounded-full bg-primary animate-bounce"
+                          style={{ animationDelay: "300ms" }}
+                        />
                       </div>
                     </div>
-                   </div>
-                 )}
+                  </div>
+                )}
                 <img
                   src={markPhoto}
                   alt="Mark Lester Acak"
-                  className={`w-full h-full object-cover object-top scale-110 transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                  className={`w-full h-full object-cover object-top scale-120 transition-opacity duration-500 ${imageLoaded ? "opacity-100" : "opacity-0"}`}
                 />
                 {/* Overlay gradient for better blending */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
@@ -111,9 +124,8 @@ const HeroSection = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 lg:mb-10"
               >
-                I help businesses save time, reduce errors, and increase productivity 
-                by building seamless automation workflows with Zapier, Make.com, 
-                GoHighLevel, and n8n.
+                I help businesses save time, reduce errors, and increase productivity by building seamless automation
+                workflows with Zapier, Make.com, GoHighLevel, and n8n.
               </motion.p>
 
               {/* CTA Buttons */}
