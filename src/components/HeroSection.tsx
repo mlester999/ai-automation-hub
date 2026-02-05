@@ -1,9 +1,8 @@
  import { useState } from "react";
  import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin } from "lucide-react";
+ import { ArrowRight, MapPin, User } from "lucide-react";
  import markPhoto from "@/assets/mark-photo.png";
- import { Loader2 } from "lucide-react";
 
 const HeroSection = () => {
    const [imageLoaded, setImageLoaded] = useState(false);
@@ -40,7 +39,9 @@ const HeroSection = () => {
                  {/* Loading indicator */}
                  {!imageLoaded && (
                    <div className="absolute inset-0 flex items-center justify-center bg-background/80">
-                     <Loader2 className="w-8 h-8 sm:w-10 sm:h-10 text-primary animate-spin" />
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-muted/50 flex items-center justify-center animate-pulse">
+                      <User className="w-8 h-8 sm:w-10 sm:h-10 text-primary/60" />
+                    </div>
                    </div>
                  )}
                 <img
