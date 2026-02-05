@@ -59,7 +59,7 @@ const projects = [
     categories: ["Workflow", "n8n"],
     href: "https://www.facebook.com/motivation.timepiece/",
     image: motivationTimepieceImg,
-    gallery: [motivationTimepieceImg, "/placeholder.svg", motivationTimepieceFacebookImg, motivationTimepieceChatImg, motivationTimepieceQuoteImg],
+    gallery: [motivationTimepieceImg, "loom:f16bbd9b73d549e4bb56fed1ab383d7a", motivationTimepieceFacebookImg, motivationTimepieceChatImg, motivationTimepieceQuoteImg],
   },
   {
     id: 3,
