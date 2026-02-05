@@ -1,9 +1,13 @@
-import { motion } from "framer-motion";
+ import { useState } from "react";
+ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin } from "lucide-react";
-import markPhoto from "@/assets/mark-photo.png";
+ import markPhoto from "@/assets/mark-photo.png";
+ import { Loader2 } from "lucide-react";
 
 const HeroSection = () => {
+   const [imageLoaded, setImageLoaded] = useState(false);
+ 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden py-24 lg:py-0">
       {/* Background Effects */}
@@ -33,11 +37,18 @@ const HeroSection = () => {
 
               {/* Photo container */}
               <div className="absolute inset-4 sm:inset-6 md:inset-8 rounded-full overflow-hidden border-4 border-primary/60 shadow-[0_0_40px_rgba(34,211,238,0.4)] sm:shadow-[0_0_60px_rgba(34,211,238,0.4)]">
+                 {/* Loading indicator */}
+                 {!imageLoaded && (
+                   <div className="absolute inset-0 flex items-center justify-center bg-background/80">
+                     <Loader2 className="w-8 h-8 sm:w-10 sm:h-10 text-primary animate-spin" />
+                   </div>
+                 )}
                 <img
                   src={markPhoto}
                   alt="Mark Lester Acak"
                   loading="lazy"
-                  className="w-full h-full object-cover object-top"
+                  onLoad={() => setImageLoaded(true)}
+                  className={`w-full h-full object-cover object-top transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                 />
                 {/* Overlay gradient for better blending */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
