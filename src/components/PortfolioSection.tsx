@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Bot, ChevronLeft, ChevronRight, FileText, Mail, MessageSquare, Phone, X, Zap } from "lucide-react";
+import { ArrowUpRight, Bot, ChevronLeft, ChevronRight, FileText, Mail, MessageSquare, Phone, X, Zap, ZoomIn, ZoomOut, RotateCcw } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
@@ -177,11 +177,19 @@ const projects = [
 
 const categories = ["All", "AI Agents", "Workflow", "AI Automation", "Integration", "n8n", "Make.com", "Zapier"];
 
-// Gallery Carousel with active dot indicator
+// Gallery Carousel with active dot indicator and zoom feature
 const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string }) => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [loadingVideos, setLoadingVideos] = useState<Set<number>>(new Set());
+  const [zoomLevel, setZoomLevel] = useState(1);
+  const [panPosition, setPanPosition] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+
+  const MIN_ZOOM = 1;
+  const MAX_ZOOM = 3;
+  const ZOOM_STEP = 0.5;
 
   useEffect(() => {
     if (!api) return;
@@ -190,6 +198,9 @@ const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string 
 
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap());
+      // Reset zoom when changing slides
+      setZoomLevel(1);
+      setPanPosition({ x: 0, y: 0 });
     });
   }, [api]);
 
@@ -212,13 +223,71 @@ const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string 
     }
   }, [current, gallery]);
 
+  const handleZoomIn = () => {
+    setZoomLevel(prev => Math.min(prev + ZOOM_STEP, MAX_ZOOM));
+  };
+
+  const handleZoomOut = () => {
+    setZoomLevel(prev => {
+      const newZoom = Math.max(prev - ZOOM_STEP, MIN_ZOOM);
+      if (newZoom === MIN_ZOOM) {
+        setPanPosition({ x: 0, y: 0 });
+      }
+      return newZoom;
+    });
+  };
+
+  const handleResetZoom = () => {
+    setZoomLevel(1);
+    setPanPosition({ x: 0, y: 0 });
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (zoomLevel > 1) {
+      e.preventDefault();
+      setIsDragging(true);
+      setDragStart({ x: e.clientX - panPosition.x, y: e.clientY - panPosition.y });
+    }
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (isDragging && zoomLevel > 1) {
+      const newX = e.clientX - dragStart.x;
+      const newY = e.clientY - dragStart.y;
+      // Limit panning based on zoom level
+      const maxPan = (zoomLevel - 1) * 150;
+      setPanPosition({
+        x: Math.max(-maxPan, Math.min(maxPan, newX)),
+        y: Math.max(-maxPan, Math.min(maxPan, newY)),
+      });
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  // Check if current item is an image (not a video)
+  const isCurrentImage = !isLoomVideo(gallery[current]);
+
   return (
     <>
       <Carousel className="w-full" setApi={setApi}>
         <CarouselContent>
           {gallery.map((item, index) => (
             <CarouselItem key={index}>
-              <div className="relative aspect-video bg-[#1a1a1a] rounded-xl overflow-hidden">
+              <div 
+                className="relative aspect-video bg-[#1a1a1a] rounded-xl overflow-hidden"
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
+                onMouseLeave={handleMouseLeave}
+                style={{ cursor: zoomLevel > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default' }}
+              >
                 {isLoomVideo(item) ? (
                   // Only render iframe when it's the active slide to pause on navigation
                   current === index ? (
@@ -252,7 +321,11 @@ const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string 
                   <img
                     src={item}
                     alt={`${title} - Image ${index + 1}`}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain transition-transform duration-200"
+                    style={{
+                      transform: current === index ? `scale(${zoomLevel}) translate(${panPosition.x / zoomLevel}px, ${panPosition.y / zoomLevel}px)` : 'none',
+                    }}
+                    draggable={false}
                   />
                 )}
               </div>
@@ -262,6 +335,40 @@ const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string 
         <CarouselPrevious className="left-2 bg-background/80 border-border hover:bg-background" />
         <CarouselNext className="right-2 bg-background/80 border-border hover:bg-background" />
       </Carousel>
+
+      {/* Zoom controls - only show for images */}
+      {isCurrentImage && (
+        <div className="flex justify-center items-center gap-2 mt-4">
+          <button
+            onClick={handleZoomOut}
+            disabled={zoomLevel <= MIN_ZOOM}
+            className="p-2 rounded-lg glass hover:bg-secondary disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200"
+            aria-label="Zoom out"
+          >
+            <ZoomOut className="w-4 h-4" />
+          </button>
+          <span className="text-sm text-muted-foreground min-w-[60px] text-center">
+            {Math.round(zoomLevel * 100)}%
+          </span>
+          <button
+            onClick={handleZoomIn}
+            disabled={zoomLevel >= MAX_ZOOM}
+            className="p-2 rounded-lg glass hover:bg-secondary disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200"
+            aria-label="Zoom in"
+          >
+            <ZoomIn className="w-4 h-4" />
+          </button>
+          {zoomLevel > 1 && (
+            <button
+              onClick={handleResetZoom}
+              className="p-2 rounded-lg glass hover:bg-secondary transition-all duration-200 ml-2"
+              aria-label="Reset zoom"
+            >
+              <RotateCcw className="w-4 h-4" />
+            </button>
+          )}
+        </div>
+      )}
 
       {/* Image counter with active indicator */}
       <div className="flex justify-center gap-2 mt-4">
