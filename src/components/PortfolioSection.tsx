@@ -280,14 +280,18 @@ const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string 
         <CarouselContent>
           {gallery.map((item, index) => (
             <CarouselItem key={index}>
-              <div 
-                className="relative aspect-video bg-[#1a1a1a] rounded-xl overflow-hidden"
-                onMouseDown={handleMouseDown}
-                onMouseMove={handleMouseMove}
-                onMouseUp={handleMouseUp}
-                onMouseLeave={handleMouseLeave}
-                style={{ cursor: zoomLevel > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default' }}
-              >
+              <div className="relative aspect-video bg-[#1a1a1a] rounded-xl overflow-hidden">
+                <div 
+                  className="absolute inset-0"
+                  onMouseDown={handleMouseDown}
+                  onMouseMove={handleMouseMove}
+                  onMouseUp={handleMouseUp}
+                  onMouseLeave={handleMouseLeave}
+                  style={{ 
+                    cursor: zoomLevel > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default',
+                    overflow: current === index && zoomLevel > 1 ? 'visible' : 'hidden'
+                  }}
+                >
                 {isLoomVideo(item) ? (
                   // Only render iframe when it's the active slide to pause on navigation
                   current === index ? (
@@ -328,6 +332,7 @@ const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string 
                     draggable={false}
                   />
                 )}
+                </div>
               </div>
             </CarouselItem>
           ))}
