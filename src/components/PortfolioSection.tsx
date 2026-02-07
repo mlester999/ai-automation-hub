@@ -242,6 +242,29 @@ const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string 
     setPanPosition({ x: 0, y: 0 });
   };
 
+  const handleDoubleClick = (e: React.MouseEvent) => {
+    const currentItem = gallery[current];
+    if (isLoomVideo(currentItem)) return; // Don't zoom videos
+    
+    if (zoomLevel === 1) {
+      // Zoom to 300% centered on click position
+      const rect = e.currentTarget.getBoundingClientRect();
+      const clickX = e.clientX - rect.left - rect.width / 2;
+      const clickY = e.clientY - rect.top - rect.height / 2;
+      
+      // Pan to center on clicked point (inverted because we want that point centered)
+      setZoomLevel(MAX_ZOOM);
+      setPanPosition({
+        x: -clickX * (MAX_ZOOM - 1),
+        y: -clickY * (MAX_ZOOM - 1),
+      });
+    } else {
+      // Reset to 100%
+      setZoomLevel(1);
+      setPanPosition({ x: 0, y: 0 });
+    }
+  };
+
   const handleMouseDown = (e: React.MouseEvent) => {
     if (zoomLevel > 1) {
       e.preventDefault();
@@ -283,6 +306,7 @@ const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string 
               <div className="relative aspect-video bg-[#1a1a1a] rounded-xl" style={{ overflow: current === index && zoomLevel > 1 ? 'visible' : 'hidden' }}>
                 <div 
                   className="absolute inset-0"
+                  onDoubleClick={handleDoubleClick}
                   onMouseDown={handleMouseDown}
                   onMouseMove={handleMouseMove}
                   onMouseUp={handleMouseUp}
