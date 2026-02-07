@@ -254,8 +254,8 @@ const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string 
     if (isDragging && zoomLevel > 1) {
       const newX = e.clientX - dragStart.x;
       const newY = e.clientY - dragStart.y;
-      // Limit panning based on zoom level
-      const maxPan = (zoomLevel - 1) * 150;
+      // Allow much larger panning range to reach edges of zoomed image
+      const maxPan = (zoomLevel - 1) * 500;
       setPanPosition({
         x: Math.max(-maxPan, Math.min(maxPan, newX)),
         y: Math.max(-maxPan, Math.min(maxPan, newY)),
@@ -280,7 +280,7 @@ const GalleryCarousel = ({ gallery, title }: { gallery: string[]; title: string 
         <CarouselContent>
           {gallery.map((item, index) => (
             <CarouselItem key={index}>
-              <div className="relative aspect-video bg-[#1a1a1a] rounded-xl overflow-hidden">
+              <div className="relative aspect-video bg-[#1a1a1a] rounded-xl" style={{ overflow: current === index && zoomLevel > 1 ? 'visible' : 'hidden' }}>
                 <div 
                   className="absolute inset-0"
                   onMouseDown={handleMouseDown}
