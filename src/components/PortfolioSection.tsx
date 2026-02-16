@@ -180,7 +180,7 @@ const projects = [
     description:
       "Built an intelligent email automation agent using Zapier that classifies incoming emails by confidence level using AI, routes high-confidence emails through a knowledge base lookup to generate and send automatic replies, and flags low-confidence emails to Slack for human review — ensuring fast, accurate responses with minimal manual effort.",
     problem: "Support team overwhelmed by high volume of repetitive email inquiries",
-    tools: ["Zapier", "Gmail", "Google Sheets", "Slack", "OpenAI"],
+    tools: ["Zapier", "OpenAI", "Google Sheets", "Gmail", "Slack"],
     results: "Automated email replies for high-confidence queries, instant Slack alerts for edge cases",
     icon: Mail,
     categories: ["AI Agents", "Zapier"],
