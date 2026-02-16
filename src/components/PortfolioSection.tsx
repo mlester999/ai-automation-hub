@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Bot, ChevronLeft, ChevronRight, FileText, Mail, MessageSquare, Phone, X, Zap, ZoomIn, ZoomOut, RotateCcw } from "lucide-react";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
@@ -438,7 +438,8 @@ const PortfolioSection = () => {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const filteredProjects = activeCategory === "All" ? projects : projects.filter((p) => p.categories.includes(activeCategory));
+  const shuffledProjects = useMemo(() => [...projects].sort(() => Math.random() - 0.5), []);
+  const filteredProjects = activeCategory === "All" ? shuffledProjects : shuffledProjects.filter((p) => p.categories.includes(activeCategory));
 
   const handleImageClick = (project: typeof projects[0]) => {
     setSelectedProject(project);
