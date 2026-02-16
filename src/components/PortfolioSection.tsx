@@ -31,6 +31,7 @@ import aiContentRepurposing3Img from "@/assets/ai-content-repurposing-3.png";
 import expenseTracker3Img from "@/assets/expense-tracker-3.png";
 import expenseTracker4Img from "@/assets/expense-tracker-4.jpeg";
 import expenseTracker5Img from "@/assets/expense-tracker-5.png";
+import emailAgentImg from "@/assets/project-email-agent.png";
 
 const projects = [
   {
@@ -172,6 +173,20 @@ const projects = [
     href: "#",
     image: aiContentRepurposingImg,
     gallery: [aiContentRepurposingImg, "loom:1f56653be907400eb5ff77f54a1ba677", aiContentRepurposing1Img, aiContentRepurposing2Img, aiContentRepurposing3Img],
+  },
+  {
+    id: 11,
+    title: "AI Email Agent — Classification, KB Reply & Human Review",
+    description:
+      "Built an intelligent email automation agent using Zapier that classifies incoming emails by confidence level using AI, routes high-confidence emails through a knowledge base lookup to generate and send automatic replies, and flags low-confidence emails to Slack for human review — ensuring fast, accurate responses with minimal manual effort.",
+    problem: "Support team overwhelmed by high volume of repetitive email inquiries",
+    tools: ["Zapier", "Gmail", "Google Sheets", "Slack", "OpenAI"],
+    results: "Automated email replies for high-confidence queries, instant Slack alerts for edge cases",
+    icon: Mail,
+    categories: ["AI Agents", "Zapier"],
+    href: "#",
+    image: emailAgentImg,
+    gallery: [emailAgentImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
 ];
 
