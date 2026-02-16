@@ -176,7 +176,7 @@ const projects = [
   },
   {
     id: 11,
-    title: "AI Email Agent — Classification, KB Reply & Human Review",
+    title: "AI Email Agent — Classification, KB Reply & Human in the Loop",
     description:
       "Built an intelligent email automation agent using Zapier that classifies incoming emails by confidence level using AI, routes high-confidence emails through a knowledge base lookup to generate and send automatic replies, and flags low-confidence emails to Slack for human review — ensuring fast, accurate responses with minimal manual effort.",
     problem: "Support team overwhelmed by high volume of repetitive email inquiries",
