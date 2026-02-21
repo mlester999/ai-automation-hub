@@ -438,7 +438,12 @@ const PortfolioSection = () => {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const shuffledProjects = useMemo(() => [...projects].sort(() => Math.random() - 0.5), []);
+  const pinnedIds = [1, 2, 3, 10]; // Hoop Shorts, Motivation Timepiece, Automated Accounting, AI Content Repurposing
+  const shuffledProjects = useMemo(() => {
+    const pinned = pinnedIds.map(id => projects.find(p => p.id === id)!);
+    const rest = projects.filter(p => !pinnedIds.includes(p.id)).sort(() => Math.random() - 0.5);
+    return [...pinned, ...rest];
+  }, []);
   const filteredProjects = activeCategory === "All" ? shuffledProjects : shuffledProjects.filter((p) => p.categories.includes(activeCategory));
 
   const handleImageClick = (project: typeof projects[0]) => {
