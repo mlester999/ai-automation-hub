@@ -28,6 +28,7 @@ import aiContentRepurposingImg from "@/assets/project-ai-content-repurposing.png
 import aiContentRepurposing1Img from "@/assets/ai-content-repurposing-1.png";
 import aiContentRepurposing2Img from "@/assets/ai-content-repurposing-2.png";
 import aiContentRepurposing3Img from "@/assets/ai-content-repurposing-3.png";
+import zorivelleRealtyChatImg from "@/assets/zorivelle-realty-chat.png";
 import expenseTracker3Img from "@/assets/expense-tracker-3.png";
 import expenseTracker4Img from "@/assets/expense-tracker-4.jpeg";
 import expenseTracker5Img from "@/assets/expense-tracker-5.png";
@@ -200,7 +201,7 @@ const projects = [
     categories: ["AI Agents", "n8n"],
     href: "#",
     image: chatbotImg,
-    gallery: [chatbotImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    gallery: [chatbotImg, "/placeholder.svg", zorivelleRealtyChatImg, "/placeholder.svg", "/placeholder.svg"],
   },
 ];
 
