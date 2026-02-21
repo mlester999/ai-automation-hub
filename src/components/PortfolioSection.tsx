@@ -188,6 +188,20 @@ const projects = [
     image: emailAgentImg,
     gallery: [emailAgentImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
+  {
+    id: 12,
+    title: "Zorivelle Realty Chatbot — RAG-Powered Document Q&A for Real Estate",
+    description:
+      "Built an intelligent RAG-based chatbot using n8n that processes and indexes real estate documents into a Supabase vector store, enabling instant AI-powered answers to user queries. The workflow monitors Google Drive for new files, extracts and embeds content via Google Gemini, and serves responses through a webhook-triggered AI agent — delivering accurate, document-grounded answers with zero manual lookup.",
+    problem: "Agents spending hours searching through property documents for client answers",
+    tools: ["n8n", "Supabase", "Google Gemini", "Google Drive", "OpenAI"],
+    results: "Instant document-grounded answers, zero manual document searching",
+    icon: Bot,
+    categories: ["AI Agents", "n8n"],
+    href: "#",
+    image: chatbotImg,
+    gallery: [chatbotImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+  },
 ];
 
 const categories = ["All", "AI Agents", "Workflow", "AI Automation", "Integration", "n8n", "Make.com", "Zapier"];
