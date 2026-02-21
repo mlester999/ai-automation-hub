@@ -209,7 +209,7 @@ const projects = [
     id: 13,
     title: "Zorivelle Realty – Lovable UI + GHL Forms/Calendars",
     description:
-      "Designed and developed a modern real estate website for Zorivelle Realty using Lovable, integrated with GoHighLevel forms and calendars for lead capture and appointment scheduling. Features include property catalog browsing, AI-powered chat widget, tour scheduling, and a fully responsive premium design — combining beautiful UI with powerful CRM-driven backend workflows.",
+      "Designed and developed a modern real estate funnel for Zorivelle Realty using Lovable, integrated with GoHighLevel forms and calendars for lead capture and appointment scheduling. Features include property catalog browsing, AI-powered chat widget, tour scheduling, and a fully responsive premium design — combining beautiful UI with powerful CRM-driven backend workflows.",
     problem: "No centralized platform for property browsing, lead capture, and appointment scheduling",
     tools: ["Lovable", "GoHighLevel", "Google Calendar"],
     results: "Streamlined lead capture, automated tour scheduling, professional online presence",
