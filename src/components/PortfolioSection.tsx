@@ -28,6 +28,7 @@ import aiContentRepurposingImg from "@/assets/project-ai-content-repurposing.png
 import aiContentRepurposing1Img from "@/assets/ai-content-repurposing-1.png";
 import aiContentRepurposing2Img from "@/assets/ai-content-repurposing-2.png";
 import aiContentRepurposing3Img from "@/assets/ai-content-repurposing-3.png";
+import verdeFunnelImg from "@/assets/project-verde-funnel.png";
 import zorivelleRealtyChatImg from "@/assets/zorivelle-realty-chat.png";
 import zorivelleRealtyDbImg from "@/assets/zorivelle-realty-database.png";
 import expenseTracker3Img from "@/assets/expense-tracker-3.png";
