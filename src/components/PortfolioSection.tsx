@@ -37,6 +37,9 @@ import expenseTracker5Img from "@/assets/expense-tracker-5.png";
 import emailAgentImg from "@/assets/project-email-agent.png";
 import zorivelleRealtyUiImg from "@/assets/project-zorivelle-realty-ui.png";
 import brightsmileDentalImg from "@/assets/project-brightsmile-dental.png";
+import brightsmilePage1Img from "@/assets/brightsmile-page1.png";
+import brightsmilePage2Img from "@/assets/brightsmile-page2.png";
+import brightsmilePage3Img from "@/assets/brightsmile-page3.png";
 
 const projects = [
   {
@@ -247,7 +250,7 @@ const projects = [
     categories: ["GoHighLevel"],
     href: "#",
     image: brightsmileDentalImg,
-    gallery: [brightsmileDentalImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    gallery: [brightsmileDentalImg, "/placeholder.svg", brightsmilePage1Img, brightsmilePage2Img, brightsmilePage3Img],
   },
 ];
 
