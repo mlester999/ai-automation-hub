@@ -235,6 +235,20 @@ const projects = [
     image: verdeFunnelImg,
     gallery: [verdeFunnelImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
+  {
+    id: 15,
+    title: "BrightSmile Dental — Appointment Booking Funnel & Automation",
+    description:
+      "Designed and built a professional appointment booking funnel for BrightSmile Dental Clinic using GoHighLevel, featuring urgency-driven headlines, a free consultation CTA, trust-building clinic imagery, and automated booking workflows. The funnel includes scarcity triggers, phone integration, and streamlined scheduling — all powered by GHL automation for appointment reminders and follow-up sequences.",
+    problem: "No streamlined online booking system to convert website visitors into scheduled dental appointments",
+    tools: ["GoHighLevel"],
+    results: "Automated appointment scheduling, increased booking conversions, reduced no-shows with automated reminders",
+    icon: Zap,
+    categories: ["GoHighLevel"],
+    href: "#",
+    image: brightsmileDentalImg,
+    gallery: [brightsmileDentalImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+  },
 ];
 
 const categories = ["All", "AI Agents", "Workflow", "AI Automation", "Integration", "n8n", "Make.com", "Zapier", "GoHighLevel"];
