@@ -36,6 +36,7 @@ import expenseTracker4Img from "@/assets/expense-tracker-4.jpeg";
 import expenseTracker5Img from "@/assets/expense-tracker-5.png";
 import emailAgentImg from "@/assets/project-email-agent.png";
 import zorivelleRealtyUiImg from "@/assets/project-zorivelle-realty-ui.png";
+import brightsmileDentalImg from "@/assets/project-brightsmile-dental.png";
 
 const projects = [
   {
