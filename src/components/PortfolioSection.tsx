@@ -220,6 +220,20 @@ const projects = [
     image: zorivelleRealtyUiImg,
     gallery: [zorivelleRealtyUiImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
+  {
+    id: 14,
+    title: "VERDÉ — Sales Funnel & Automation",
+    description:
+      "Built a high-converting sales funnel for VERDÉ Sparkling Pistachio using GoHighLevel, featuring urgency-driven copy, embedded product video, social proof badges, and automated order processing. The funnel includes scarcity triggers, trust signals, and a streamlined checkout flow — all powered by GHL automation workflows for lead nurturing and follow-up sequences.",
+    problem: "No automated sales funnel to convert visitors into buyers with follow-up sequences",
+    tools: ["GoHighLevel"],
+    results: "Automated sales pipeline, higher conversion rates, hands-off order processing",
+    icon: Zap,
+    categories: ["GoHighLevel"],
+    href: "#",
+    image: verdeFunnelImg,
+    gallery: [verdeFunnelImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+  },
 ];
 
 const categories = ["All", "AI Agents", "Workflow", "AI Automation", "Integration", "n8n", "Make.com", "Zapier", "GoHighLevel"];
