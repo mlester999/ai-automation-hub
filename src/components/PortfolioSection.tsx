@@ -28,6 +28,7 @@ import aiContentRepurposingImg from "@/assets/project-ai-content-repurposing.png
 import aiContentRepurposing1Img from "@/assets/ai-content-repurposing-1.png";
 import aiContentRepurposing2Img from "@/assets/ai-content-repurposing-2.png";
 import aiContentRepurposing3Img from "@/assets/ai-content-repurposing-3.png";
+import verdeFunnelImg from "@/assets/project-verde-funnel.png";
 import zorivelleRealtyChatImg from "@/assets/zorivelle-realty-chat.png";
 import zorivelleRealtyDbImg from "@/assets/zorivelle-realty-database.png";
 import expenseTracker3Img from "@/assets/expense-tracker-3.png";
@@ -218,6 +219,20 @@ const projects = [
     href: "https://marky-estate-showcase.lovable.app",
     image: zorivelleRealtyUiImg,
     gallery: [zorivelleRealtyUiImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+  },
+  {
+    id: 14,
+    title: "VERDÉ — Sales Funnel & Automation",
+    description:
+      "Built a high-converting sales funnel for VERDÉ Sparkling Pistachio using GoHighLevel, featuring urgency-driven copy, embedded product video, social proof badges, and automated order processing. The funnel includes scarcity triggers, trust signals, and a streamlined checkout flow — all powered by GHL automation workflows for lead nurturing and follow-up sequences.",
+    problem: "No automated sales funnel to convert visitors into buyers with follow-up sequences",
+    tools: ["GoHighLevel"],
+    results: "Automated sales pipeline, higher conversion rates, hands-off order processing",
+    icon: Zap,
+    categories: ["GoHighLevel"],
+    href: "#",
+    image: verdeFunnelImg,
+    gallery: [verdeFunnelImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
 ];
 
