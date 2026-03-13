@@ -44,6 +44,10 @@ import apexRejuvenationImg from "@/assets/project-apex-rejuvenation.png";
 import apexWorkflow1Img from "@/assets/apex-workflow1.png";
 import apexWorkflow2Img from "@/assets/apex-workflow2.png";
 import apexBookingImg from "@/assets/apex-booking.png";
+import propertyWorkflowImg from "@/assets/property-workflow.png";
+import propertyEmailImg from "@/assets/property-email.png";
+import propertyPreviewImg from "@/assets/property-preview.png";
+import propertyTypeformImg from "@/assets/property-typeform.png";
 
 const projects = [
   {
