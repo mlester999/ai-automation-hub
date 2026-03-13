@@ -256,6 +256,20 @@ const projects = [
     image: brightsmileDentalImg,
     gallery: [brightsmileDentalImg, "/placeholder.svg", brightsmilePage1Img, brightsmilePage2Img, brightsmilePage3Img],
   },
+  {
+    id: 16,
+    title: "Apex Rejuvenation — Telehealth Website & Appointment Automation",
+    description:
+      "Built a full concierge telehealth website and appointment booking system for Apex Rejuvenation using GoHighLevel. The site features physician-led hormone optimization services including TRT, medical weight loss, and peptide therapies. Includes automated consultation confirmation workflows, cancelled/no-show re-engagement sequences, and a streamlined booking calendar — all powered by GHL automation.",
+    problem: "No professional online presence or automated booking system to convert leads into scheduled physician consultations",
+    tools: ["GoHighLevel"],
+    results: "Automated consultation booking, confirmation & reminder workflows, cancelled/no-show follow-up sequences, professional HIPAA-compliant web presence",
+    icon: Zap,
+    categories: ["GoHighLevel"],
+    href: "#",
+    image: apexRejuvenationImg,
+    gallery: [apexWorkflow1Img, apexWorkflow2Img, "/placeholder.svg", apexRejuvenationImg, apexBookingImg],
+  },
 ];
 
 const categories = ["All", "AI Agents", "Workflow", "AI Automation", "Integration", "n8n", "Make.com", "Zapier", "GoHighLevel"];
