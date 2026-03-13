@@ -44,6 +44,10 @@ import apexRejuvenationImg from "@/assets/project-apex-rejuvenation.png";
 import apexWorkflow1Img from "@/assets/apex-workflow1.png";
 import apexWorkflow2Img from "@/assets/apex-workflow2.png";
 import apexBookingImg from "@/assets/apex-booking.png";
+import propertyWorkflowImg from "@/assets/property-workflow.png";
+import propertyEmailImg from "@/assets/property-email.png";
+import propertyPreviewImg from "@/assets/property-preview.png";
+import propertyTypeformImg from "@/assets/property-typeform.png";
 
 const projects = [
   {
@@ -269,6 +273,20 @@ const projects = [
     href: "#",
     image: apexRejuvenationImg,
     gallery: [apexWorkflow1Img, apexWorkflow2Img, "/placeholder.svg", apexRejuvenationImg, apexBookingImg],
+  },
+  {
+    id: 17,
+    title: "AI Property Visualization — Automated Listing & Image Generation Workflow",
+    description:
+      "Built an end-to-end n8n automation workflow that takes property details from a Typeform intake, generates a high-converting Facebook Marketplace listing using AI, creates 5 MLS-style property images via DALL-E (exterior, living room, kitchen, bedroom, backyard), and delivers the complete listing package with all images attached via Gmail — ready to copy, paste, and post.",
+    problem: "Real estate agents spend hours manually creating property listings, writing descriptions, and sourcing or editing property images for each listing",
+    tools: ["n8n"],
+    results: "Fully automated listing generation from intake to email delivery, AI-generated MLS-style property images, high-converting listing copy with zero manual effort",
+    icon: Zap,
+    categories: ["AI Automation", "n8n", "Workflow"],
+    href: "#",
+    image: propertyWorkflowImg,
+    gallery: [propertyWorkflowImg, propertyEmailImg, "/placeholder.svg", propertyPreviewImg, propertyTypeformImg],
   },
 ];
 
