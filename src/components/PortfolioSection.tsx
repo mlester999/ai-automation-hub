@@ -48,6 +48,8 @@ import apexWorkflow2Img from "@/assets/apex-workflow2.png";
 import apexBookingImg from "@/assets/apex-booking.png";
 import propertyWorkflowImg from "@/assets/property-workflow.png";
 import propertyEmailImg from "@/assets/property-email.png";
+import moneyResetThumbnailImg from "@/assets/money-reset-thumbnail.png";
+import moneyResetFullpageImg from "@/assets/money-reset-fullpage.png";
 import propertyPreviewImg from "@/assets/property-preview.png";
 import propertyTypeformImg from "@/assets/property-typeform.png";
 
@@ -289,6 +291,20 @@ const projects = [
     href: "#",
     image: propertyWorkflowImg,
     gallery: [propertyWorkflowImg, propertyEmailImg, "/placeholder.svg", propertyPreviewImg, propertyTypeformImg],
+  },
+  {
+    id: 18,
+    title: "Money Reset — Lead Magnet & Sales Funnel",
+    description:
+      "Built a high-converting lead magnet and sales funnel for the Money Reset ebook using GoHighLevel. The funnel features a compelling landing page with social proof, testimonials, detailed book benefits, free video courses, private community access, and multiple CTAs — designed to capture leads and drive ebook sales for millennials looking to take control of their finances.",
+    problem: "The author needed a professional sales funnel to promote and sell the Money Reset ebook while capturing leads and building an audience",
+    tools: ["GoHighLevel"],
+    results: "Complete lead magnet and sales funnel with optimized landing page, social proof sections, and automated lead capture",
+    icon: Zap,
+    categories: ["GoHighLevel"],
+    href: "#",
+    image: moneyResetThumbnailImg,
+    gallery: [moneyResetFullpageImg, moneyResetThumbnailImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
   },
 ];
 
