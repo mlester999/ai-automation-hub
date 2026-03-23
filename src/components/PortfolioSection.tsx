@@ -260,7 +260,7 @@ const projects = [
     categories: ["GoHighLevel"],
     href: "#",
     image: brightsmileDentalImg,
-    gallery: [brightsmileDentalImg, "/placeholder.svg", brightsmilePage1Img, brightsmilePage2Img, brightsmilePage3Img],
+    gallery: [brightsmileDentalImg, "/placeholder.svg", brightsmilePage1Img, brightsmileWorkflow1Img, brightsmileWorkflow2Img],
   },
   {
     id: 16,
