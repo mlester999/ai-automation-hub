@@ -310,6 +310,34 @@ const projects = [
     image: moneyResetThumbnailImg,
     gallery: [moneyResetWorkflowImg, moneyResetFullpageImg, moneyResetLeadmagnetImg, "/placeholder.svg", "/placeholder.svg"],
   },
+  {
+    id: 19,
+    title: "BOF Growth Guide — Bottom-of-Funnel Content Automation",
+    description:
+      "Built a complex Make.com automation scenario for Vigilant Safety that processes bottom-of-funnel growth guide content through multiple conditional branches. The workflow ingests data, routes it through iterators and routers, and distributes formatted content across ClickUp tasks and Google Sheets — enabling scalable, hands-off content operations.",
+    problem: "Manual content distribution across multiple platforms consuming hours of repetitive work",
+    tools: ["Make", "ClickUp", "Google Sheets"],
+    results: "Fully automated multi-branch content distribution, zero manual task creation",
+    icon: Zap,
+    categories: ["Workflow", "Make.com"],
+    href: "#",
+    image: bofGrowthGuideImg,
+    gallery: [bofGrowthGuideImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+  },
+  {
+    id: 20,
+    title: "Vigilant Safety Growth Guide — Automated Task & Data Workflow",
+    description:
+      "Created a Make.com automation workflow for Vigilant Safety's 2026 growth guide that pulls data from Google Sheets, syncs with ClickUp users, routes through conditional logic, and automatically creates and updates tasks across multiple ClickUp workspaces — streamlining project management and eliminating manual task assignment.",
+    problem: "Manual task creation and assignment across teams causing delays and missed deadlines",
+    tools: ["Make", "Google Sheets", "ClickUp"],
+    results: "Automated task routing and creation, real-time team synchronization",
+    icon: Zap,
+    categories: ["Workflow", "Make.com"],
+    href: "#",
+    image: vigilantSafetyImg,
+    gallery: [vigilantSafetyImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+  },
 ];
 
 const categories = ["All", "AI Agents", "Workflow", "AI Automation", "Integration", "n8n", "Make.com", "Zapier", "GoHighLevel"];
