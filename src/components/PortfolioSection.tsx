@@ -54,6 +54,8 @@ import moneyResetWorkflowImg from "@/assets/money-reset-workflow.png";
 import moneyResetLeadmagnetImg from "@/assets/money-reset-leadmagnet.png";
 import propertyPreviewImg from "@/assets/property-preview.png";
 import propertyTypeformImg from "@/assets/property-typeform.png";
+import bofGrowthGuideImg from "@/assets/bof-growth-guide.png";
+import vigilantSafetyImg from "@/assets/vigilant-safety-growth-guide.png";
 
 const projects = [
   {
