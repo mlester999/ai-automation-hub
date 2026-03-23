@@ -40,6 +40,8 @@ import brightsmileDentalImg from "@/assets/project-brightsmile-dental.png";
 import brightsmilePage1Img from "@/assets/brightsmile-page1.png";
 import brightsmilePage2Img from "@/assets/brightsmile-page2.png";
 import brightsmilePage3Img from "@/assets/brightsmile-page3.png";
+import brightsmileWorkflow1Img from "@/assets/brightsmile-workflow1.png";
+import brightsmileWorkflow2Img from "@/assets/brightsmile-workflow2.png";
 import apexRejuvenationImg from "@/assets/project-apex-rejuvenation.png";
 import apexWorkflow1Img from "@/assets/apex-workflow1.png";
 import apexWorkflow2Img from "@/assets/apex-workflow2.png";
