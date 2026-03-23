@@ -306,7 +306,7 @@ const projects = [
     categories: ["GoHighLevel"],
     href: "#",
     image: moneyResetThumbnailImg,
-    gallery: [moneyResetFullpageImg, moneyResetThumbnailImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    gallery: [moneyResetWorkflowImg, moneyResetFullpageImg, moneyResetLeadmagnetImg, "/placeholder.svg", "/placeholder.svg"],
   },
 ];
 
