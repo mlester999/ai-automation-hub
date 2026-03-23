@@ -50,6 +50,8 @@ import propertyWorkflowImg from "@/assets/property-workflow.png";
 import propertyEmailImg from "@/assets/property-email.png";
 import moneyResetThumbnailImg from "@/assets/money-reset-thumbnail.png";
 import moneyResetFullpageImg from "@/assets/money-reset-fullpage.png";
+import moneyResetWorkflowImg from "@/assets/money-reset-workflow.png";
+import moneyResetLeadmagnetImg from "@/assets/money-reset-leadmagnet.png";
 import propertyPreviewImg from "@/assets/property-preview.png";
 import propertyTypeformImg from "@/assets/property-typeform.png";
 
@@ -304,7 +306,7 @@ const projects = [
     categories: ["GoHighLevel"],
     href: "#",
     image: moneyResetThumbnailImg,
-    gallery: [moneyResetFullpageImg, moneyResetThumbnailImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    gallery: [moneyResetWorkflowImg, moneyResetFullpageImg, moneyResetLeadmagnetImg, "/placeholder.svg", "/placeholder.svg"],
   },
 ];
 
