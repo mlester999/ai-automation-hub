@@ -57,6 +57,7 @@ import propertyTypeformImg from "@/assets/property-typeform.png";
 import bofGrowthGuideImg from "@/assets/bof-growth-guide.png";
 import vigilantSafetyImg from "@/assets/vigilant-safety-growth-guide.png";
 import mitchayHaulsMainImg from "@/assets/mitchay-hauls-main.png";
+import mitchayHaulsWebsiteImg from "@/assets/mitchay-hauls-website.png";
 import mitchayHauls1Img from "@/assets/mitchay-hauls-1.png";
 import mitchayHauls2Img from "@/assets/mitchay-hauls-2.png";
 import mitchayHauls3Img from "@/assets/mitchay-hauls-3.png";
@@ -354,7 +355,7 @@ const projects = [
     categories: ["Workflow", "GoHighLevel"],
     href: "#",
     image: mitchayHauls1Img,
-    gallery: [mitchayHaulsMainImg, mitchayHauls1Img, mitchayHauls2Img, mitchayHauls3Img, "/placeholder.svg"],
+    gallery: [mitchayHaulsWebsiteImg, mitchayHaulsMainImg, mitchayHauls1Img, mitchayHauls2Img, mitchayHauls3Img],
   },
 ];
 
