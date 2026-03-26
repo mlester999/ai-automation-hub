@@ -56,6 +56,9 @@ import propertyPreviewImg from "@/assets/property-preview.png";
 import propertyTypeformImg from "@/assets/property-typeform.png";
 import bofGrowthGuideImg from "@/assets/bof-growth-guide.png";
 import vigilantSafetyImg from "@/assets/vigilant-safety-growth-guide.png";
+import mitchayHauls1Img from "@/assets/mitchay-hauls-1.png";
+import mitchayHauls2Img from "@/assets/mitchay-hauls-2.png";
+import mitchayHauls3Img from "@/assets/mitchay-hauls-3.png";
 
 const projects = [
   {
@@ -337,6 +340,20 @@ const projects = [
     href: "#",
     image: vigilantSafetyImg,
     gallery: [vigilantSafetyImg, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+  },
+  {
+    id: 21,
+    title: "Mitchay Hauls — UGC Lead-Generation Funnel & Review-Driven Nurture Sequence",
+    description:
+      "Built a GoHighLevel funnel for Mitchay Hauls, a viral TikTok-driven e-commerce brand. The funnel captures leads through trending product showcases, nurtures them with real customer reviews and UGC content, and drives conversions with urgency-based CTAs — all backed by an automated review-driven email/SMS nurture sequence.",
+    problem: "Viral TikTok traffic not being captured or converted into repeat buyers",
+    tools: ["GoHighLevel", "TikTok", "Shopify"],
+    results: "Streamlined lead capture, automated nurture sequence, increased repeat purchases",
+    icon: Zap,
+    categories: ["Workflow", "GoHighLevel"],
+    href: "#",
+    image: mitchayHauls1Img,
+    gallery: [mitchayHauls1Img, mitchayHauls2Img, mitchayHauls3Img, "/placeholder.svg", "/placeholder.svg"],
   },
 ];
 
