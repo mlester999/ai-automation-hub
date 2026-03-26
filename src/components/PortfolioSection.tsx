@@ -56,6 +56,7 @@ import propertyPreviewImg from "@/assets/property-preview.png";
 import propertyTypeformImg from "@/assets/property-typeform.png";
 import bofGrowthGuideImg from "@/assets/bof-growth-guide.png";
 import vigilantSafetyImg from "@/assets/vigilant-safety-growth-guide.png";
+import mitchayHaulsMainImg from "@/assets/mitchay-hauls-main.png";
 import mitchayHauls1Img from "@/assets/mitchay-hauls-1.png";
 import mitchayHauls2Img from "@/assets/mitchay-hauls-2.png";
 import mitchayHauls3Img from "@/assets/mitchay-hauls-3.png";
@@ -353,7 +354,7 @@ const projects = [
     categories: ["Workflow", "GoHighLevel"],
     href: "#",
     image: mitchayHauls1Img,
-    gallery: [mitchayHauls1Img, mitchayHauls2Img, mitchayHauls3Img, "/placeholder.svg", "/placeholder.svg"],
+    gallery: [mitchayHaulsMainImg, mitchayHauls1Img, mitchayHauls2Img, mitchayHauls3Img, "/placeholder.svg"],
   },
 ];
 
@@ -611,7 +612,14 @@ const PortfolioSection = () => {
     const rest = projects.filter(p => !pinnedIds.includes(p.id)).sort(() => Math.random() - 0.5);
     return [...pinned, ...rest];
   }, []);
-  const filteredProjects = activeCategory === "All" ? shuffledProjects : shuffledProjects.filter((p) => p.categories.includes(activeCategory));
+  const filteredProjects = useMemo(() => {
+    const base = activeCategory === "All" ? shuffledProjects : shuffledProjects.filter((p) => p.categories.includes(activeCategory));
+    if (activeCategory === "GoHighLevel") {
+      const mitchay = base.find(p => p.id === 21);
+      if (mitchay) return [mitchay, ...base.filter(p => p.id !== 21)];
+    }
+    return base;
+  }, [activeCategory, shuffledProjects]);
 
   const handleImageClick = (project: typeof projects[0]) => {
     setSelectedProject(project);
