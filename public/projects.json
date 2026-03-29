@@ -1,0 +1,233 @@
+[
+  {
+    "id": 1,
+    "title": "Hoop Shorts — AI-Powered NBA Video Clipping & Shorts Automation",
+    "desc": "Built an AI-powered automated content system that generates optimized titles and descriptions, discovers long-form NBA videos with no existing Shorts, intelligently identifies and extracts high-impact moments.",
+    "tools": ["n8n", "OpenAI", "Klap AI"],
+    "cats": ["AI Automation", "n8n"],
+    "results": "90% reduction in manual editing work",
+    "image": "project-hoop-shorts.png",
+    "gallery": ["project-hoop-shorts.png", "hoop-shorts-youtube.png", "hoop-shorts-instagram.png", "hoop-shorts-facebook.png"],
+    "href": "https://www.youtube.com/@HoopShortsOfficial"
+  },
+  {
+    "id": 2,
+    "title": "Motivation Timepiece — AI Automation for Motivational Quote Image Generation",
+    "desc": "AI-powered automated workflow that creates and publishes motivational content to Facebook without manual effort.",
+    "tools": ["Midjourney", "Airtable", "n8n"],
+    "cats": ["Workflow", "n8n"],
+    "results": "Zero manual quote research, 100% automated posting",
+    "image": "project-motivation-timepiece.png",
+    "gallery": ["project-motivation-timepiece.png", "motivation-timepiece-facebook.png", "motivation-timepiece-chat.png", "motivation-timepiece-quote.png"],
+    "href": "https://www.facebook.com/motivation.timepiece/"
+  },
+  {
+    "id": 3,
+    "title": "Automated Accounting Workflow — Xero to Google Sheets & Asana",
+    "desc": "Automated accounting workflow using Make.com that extracts transactions from Xero and routes to Google Sheets and Asana.",
+    "tools": ["Make", "Xero", "Google Sheets"],
+    "cats": ["Workflow", "Make.com"],
+    "results": "80% reduction in accounting data entry time",
+    "image": "project-xero-asana.png",
+    "gallery": ["project-xero-asana.png"],
+    "href": "#"
+  },
+  {
+    "id": 4,
+    "title": "Scarlet Eve AI — Christmas Anime Companion",
+    "desc": "A Christmas-themed anime AI agent on Telegram for AI image creation with full customization.",
+    "tools": ["n8n", "Telegram", "Midjourney"],
+    "cats": ["AI Agents", "n8n"],
+    "results": "Instant image variations, consistent results",
+    "image": "project-scarlet-eve.png",
+    "gallery": ["project-scarlet-eve.png"],
+    "href": "https://t.me/ScarletEveAIBot"
+  },
+  {
+    "id": 5,
+    "title": "AI Expense Tracking & Budgeting Workflow",
+    "desc": "Automated expense tracking from Telegram into Notion in real time.",
+    "tools": ["Notion", "n8n", "Telegram"],
+    "cats": ["Workflow", "n8n"],
+    "results": "Zero missed entries, real-time tracking",
+    "image": "project-expense-tracking.png",
+    "gallery": ["project-expense-tracking.png", "expense-tracker-3.png", "expense-tracker-5.png"],
+    "href": "#"
+  },
+  {
+    "id": 6,
+    "title": "Cavinti Suite — AI Support Agent Chatbot",
+    "desc": "Intelligent chatbot for an Airbnb property handling guest inquiries and booking questions 24/7.",
+    "tools": ["Meta", "n8n", "Google"],
+    "cats": ["AI Agents", "Integration", "n8n"],
+    "results": "24/7 automated guest support",
+    "image": "project-chatbot.png",
+    "gallery": ["project-chatbot.png"],
+    "href": "https://www.facebook.com/cavinti.suite/"
+  },
+  {
+    "id": 7,
+    "title": "Zapp Tech — AI Automation for Tech Content Repurposing",
+    "desc": "AI-powered content automation transforming long-form tech videos into engaging shorts.",
+    "tools": ["OpenAI", "Klap AI", "n8n"],
+    "cats": ["AI Automation", "n8n"],
+    "results": "AI-selected viral moments, multi-platform posting",
+    "image": "project-zapp-tech.png",
+    "gallery": ["project-zapp-tech.png", "zapp-tech-facebook.png", "zapp-tech-youtube.png", "zapp-tech-instagram.png"],
+    "href": "https://www.instagram.com/officialzapptech/"
+  },
+  {
+    "id": 8,
+    "title": "Mitchy Dental Lounge — AI Voice Receptionist",
+    "desc": "AI-powered voice receptionist handling appointment scheduling through natural voice conversations.",
+    "tools": ["n8n", "ElevenLabs", "Google Calendar"],
+    "cats": ["AI Agents", "n8n"],
+    "results": "24/7 automated scheduling, zero missed bookings",
+    "image": "project-mitchy-dental.png",
+    "gallery": ["project-mitchy-dental.png"],
+    "href": "#"
+  },
+  {
+    "id": 9,
+    "title": "Marko Bar Deal Automation — Automated Sales Pipeline",
+    "desc": "Automated deal workflow using Zapier triggered by Airtable 'Closed Won' status.",
+    "tools": ["Zapier", "Airtable", "PandaDoc"],
+    "cats": ["Workflow", "Zapier"],
+    "results": "Instant contract generation, real-time notifications",
+    "image": "project-marko-bar-deal.png",
+    "gallery": ["project-marko-bar-deal.png"],
+    "href": "#"
+  },
+  {
+    "id": 10,
+    "title": "AI Content Repurposing — Multi-Platform Social Media",
+    "desc": "AI-powered content repurposing using Zapier that monitors Google Drive for new video files.",
+    "tools": ["Zapier", "Google Drive", "Facebook"],
+    "cats": ["AI Automation", "Zapier"],
+    "results": "Zero-touch content distribution",
+    "image": "project-ai-content-repurposing.png",
+    "gallery": ["project-ai-content-repurposing.png", "ai-content-repurposing-1.png", "ai-content-repurposing-2.png", "ai-content-repurposing-3.png"],
+    "href": "#"
+  },
+  {
+    "id": 11,
+    "title": "AI Email Agent — Classification, KB Reply & Human in the Loop",
+    "desc": "Intelligent email automation agent classifying emails by confidence level using AI.",
+    "tools": ["Zapier", "OpenAI", "Gmail"],
+    "cats": ["AI Agents", "Zapier"],
+    "results": "Automated replies, instant Slack alerts for edge cases",
+    "image": "project-email-agent.png",
+    "gallery": ["project-email-agent.png"],
+    "href": "#"
+  },
+  {
+    "id": 12,
+    "title": "Zorivelle Realty Chatbot — RAG-Powered Document Q&A",
+    "desc": "Intelligent RAG-based chatbot that processes and indexes real estate documents for instant AI answers.",
+    "tools": ["n8n", "Supabase", "Google Gemini"],
+    "cats": ["AI Agents", "n8n"],
+    "results": "Instant document-grounded answers",
+    "image": "project-chatbot.png",
+    "gallery": ["project-chatbot.png", "zorivelle-realty-chat.png", "zorivelle-realty-database.png"],
+    "href": "#"
+  },
+  {
+    "id": 13,
+    "title": "Zorivelle Realty – Lovable UI + GHL Forms/Calendars",
+    "desc": "Modern real estate funnel integrated with GoHighLevel forms and calendars.",
+    "tools": ["Lovable", "GoHighLevel"],
+    "cats": ["Integration", "GoHighLevel"],
+    "results": "Streamlined lead capture, automated tour scheduling",
+    "image": "project-zorivelle-realty-ui.png",
+    "gallery": ["project-zorivelle-realty-ui.png"],
+    "href": "https://marky-estate-showcase.lovable.app"
+  },
+  {
+    "id": 14,
+    "title": "VERDÉ — Sales Funnel & Automation",
+    "desc": "High-converting sales funnel for VERDÉ Sparkling Pistachio using GoHighLevel.",
+    "tools": ["GoHighLevel"],
+    "cats": ["GoHighLevel"],
+    "results": "Automated sales pipeline, higher conversion rates",
+    "image": "project-verde-funnel.png",
+    "gallery": ["project-verde-funnel.png"],
+    "href": "#"
+  },
+  {
+    "id": 15,
+    "title": "BrightSmile Dental — Appointment Booking Funnel",
+    "desc": "Professional appointment booking funnel for BrightSmile Dental Clinic using GoHighLevel.",
+    "tools": ["GoHighLevel"],
+    "cats": ["GoHighLevel"],
+    "results": "Automated scheduling, increased booking conversions",
+    "image": "project-brightsmile-dental.png",
+    "gallery": ["project-brightsmile-dental.png", "brightsmile-page1.png", "brightsmile-workflow1.png", "brightsmile-workflow2.png"],
+    "href": "#"
+  },
+  {
+    "id": 16,
+    "title": "Apex Rejuvenation — Telehealth Website & Appointment Automation",
+    "desc": "Full concierge telehealth website and appointment booking system using GoHighLevel.",
+    "tools": ["GoHighLevel"],
+    "cats": ["GoHighLevel"],
+    "results": "Automated consultation booking & follow-up sequences",
+    "image": "project-apex-rejuvenation.png",
+    "gallery": ["apex-workflow1.png", "apex-workflow2.png", "project-apex-rejuvenation.png", "apex-booking.png"],
+    "href": "#"
+  },
+  {
+    "id": 17,
+    "title": "AI Property Visualization — Automated Listing & Image Generation",
+    "desc": "End-to-end n8n automation from Typeform intake to AI-generated listings and DALL-E images via Gmail.",
+    "tools": ["n8n"],
+    "cats": ["AI Automation", "n8n", "Workflow"],
+    "results": "Fully automated listing generation",
+    "image": "property-workflow.png",
+    "gallery": ["property-workflow.png", "property-email.png", "property-preview.png", "property-typeform.png"],
+    "href": "#"
+  },
+  {
+    "id": 18,
+    "title": "Money Reset — Lead Magnet & Sales Funnel",
+    "desc": "High-converting lead magnet and sales funnel for the Money Reset ebook using GoHighLevel.",
+    "tools": ["GoHighLevel"],
+    "cats": ["GoHighLevel"],
+    "results": "Complete lead magnet and sales funnel",
+    "image": "money-reset-thumbnail.png",
+    "gallery": ["money-reset-workflow.png", "money-reset-fullpage.png", "money-reset-leadmagnet.png"],
+    "href": "#"
+  },
+  {
+    "id": 19,
+    "title": "BOF Growth Guide — Bottom-of-Funnel Content Automation",
+    "desc": "Complex Make.com automation for Vigilant Safety processing bottom-of-funnel content.",
+    "tools": ["Make", "ClickUp", "Google Sheets"],
+    "cats": ["Workflow", "Make.com"],
+    "results": "Fully automated multi-branch content distribution",
+    "image": "bof-growth-guide.png",
+    "gallery": ["bof-growth-guide.png"],
+    "href": "#"
+  },
+  {
+    "id": 20,
+    "title": "Vigilant Safety Growth Guide — Automated Task & Data Workflow",
+    "desc": "Make.com automation for Vigilant Safety's growth guide with ClickUp task routing.",
+    "tools": ["Make", "Google Sheets", "ClickUp"],
+    "cats": ["Workflow", "Make.com"],
+    "results": "Automated task routing and creation",
+    "image": "vigilant-safety-growth-guide.png",
+    "gallery": ["vigilant-safety-growth-guide.png"],
+    "href": "#"
+  },
+  {
+    "id": 21,
+    "title": "Mitchay Hauls — UGC Lead-Generation Funnel",
+    "desc": "GoHighLevel funnel for Mitchay Hauls, a viral TikTok-driven e-commerce brand with review-driven nurture sequence.",
+    "tools": ["GoHighLevel", "TikTok", "Shopify"],
+    "cats": ["Workflow", "GoHighLevel"],
+    "results": "Streamlined lead capture, automated nurture sequence",
+    "image": "mitchay-hauls-1.png",
+    "gallery": ["mitchay-hauls-website.png", "mitchay-hauls-main.png", "mitchay-hauls-1.png", "mitchay-hauls-2.png", "mitchay-hauls-3.png"],
+    "href": "#"
+  }
+]
