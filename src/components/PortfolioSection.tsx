@@ -397,6 +397,20 @@ const projects = [
     image: onlineJobsWorkflowImg,
     gallery: [onlineJobsWorkflowImg, "/placeholder.svg", onlineJobsSiteImg, onlineJobsSlackImg, onlineJobsCoverletterImg],
   },
+  {
+    id: 24,
+    title: "YouTube Hook Research — AI-Powered Viral Video Analysis & Hook Generation",
+    description:
+      "Built an end-to-end n8n automation that eliminates the manual grind of studying viral YouTube videos for hook inspiration. The workflow accepts YouTube URLs via Typeform, validates and enriches each video with live metrics (views, subscribers, channel stats), then uses Google Gemini to analyze hook effectiveness using the views-per-subscriber ratio — a clear signal of how well a video outperforms its audience size. Each video receives a detailed performance breakdown, hook analysis, and three AI-generated ad hook variations, all automatically logged to Google Sheets. Invalid URLs trigger an instant Gmail notification for correction, keeping the pipeline clean and uninterrupted.",
+    problem: "Manual, time-consuming process of copying video stats, calculating ratios, and writing hook notes by hand",
+    tools: ["n8n", "Google Gemini", "Typeform", "Google Sheets", "Gmail"],
+    results: "Fully automated hook research, AI-generated ad variations, zero manual data entry",
+    icon: Zap,
+    categories: ["AI Automation", "n8n"],
+    href: "#",
+    image: ytHookWorkflowImg,
+    gallery: [ytHookWorkflowImg, ytHookEmailImg, ytHookTypeformImg, ytHookSheetsImg],
+  },
 ];
 
 const categories = ["All", "AI Agents", "Workflow", "AI Automation", "Integration", "n8n", "Make.com", "Zapier", "GoHighLevel"];

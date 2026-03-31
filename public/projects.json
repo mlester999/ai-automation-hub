@@ -251,5 +251,16 @@
     "image": "online-jobs-workflow.png",
     "gallery": ["online-jobs-workflow.png", "", "online-jobs-site.png", "online-jobs-slack.png", "online-jobs-coverletter.png"],
     "href": "#"
+  },
+  {
+    "id": 24,
+    "title": "YouTube Hook Research — AI-Powered Viral Video Analysis & Hook Generation",
+    "desc": "Built an end-to-end n8n automation that eliminates the manual grind of studying viral YouTube videos for hook inspiration. The workflow accepts YouTube URLs via Typeform, validates and enriches each video with live metrics (views, subscribers, channel stats), then uses Google Gemini to analyze hook effectiveness using the views-per-subscriber ratio — a clear signal of how well a video outperforms its audience size. Each video receives a detailed performance breakdown, hook analysis, and three AI-generated ad hook variations, all automatically logged to Google Sheets. Invalid URLs trigger an instant Gmail notification for correction, keeping the pipeline clean and uninterrupted.",
+    "tools": ["n8n", "Google Gemini", "Typeform", "Google Sheets", "Gmail"],
+    "cats": ["AI Automation", "n8n"],
+    "results": "Fully automated hook research, AI-generated ad variations, zero manual data entry",
+    "image": "yt-hook-workflow.png",
+    "gallery": ["yt-hook-workflow.png", "yt-hook-email.png", "yt-hook-typeform.png", "yt-hook-sheets.png"],
+    "href": "#"
   }
 ]
