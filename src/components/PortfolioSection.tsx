@@ -65,6 +65,10 @@ import linkedinWorkflowImg from "@/assets/linkedin-workflow.png";
 import linkedinSlackImg from "@/assets/linkedin-slack.png";
 import linkedinPostsImg from "@/assets/linkedin-posts.jpeg";
 import linkedinSheetsImg from "@/assets/linkedin-sheets.png";
+import onlineJobsWorkflowImg from "@/assets/online-jobs-workflow.png";
+import onlineJobsSiteImg from "@/assets/online-jobs-site.png";
+import onlineJobsSlackImg from "@/assets/online-jobs-slack.png";
+import onlineJobsCoverletterImg from "@/assets/online-jobs-coverletter.png";
 
 const projects = [
   {
