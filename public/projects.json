@@ -229,5 +229,16 @@
     "image": "mitchay-hauls-1.png",
     "gallery": ["mitchay-hauls-website.png", "mitchay-hauls-main.png", "mitchay-hauls-1.png", "mitchay-hauls-2.png", "mitchay-hauls-3.png"],
     "href": "#"
+  },
+  {
+    "id": 22,
+    "title": "AI LinkedIn Content Publishing — Automated Approval & Posting via Slack",
+    "desc": "Built an end-to-end n8n automation that transforms AI-generated content into fully reviewed and approved LinkedIn posts — eliminating the usual back-and-forth between content creation and publishing.",
+    "tools": ["n8n", "Slack", "Google Sheets", "LinkedIn", "OpenAI"],
+    "cats": ["AI Automation", "n8n"],
+    "results": "Zero-touch publishing after approval, real-time Slack-based review",
+    "image": "linkedin-workflow.png",
+    "gallery": ["linkedin-workflow.png", "", "linkedin-slack.png", "linkedin-posts.jpeg", "linkedin-sheets.png"],
+    "href": "#"
   }
 ]
