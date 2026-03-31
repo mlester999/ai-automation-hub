@@ -249,7 +249,7 @@
     "cats": ["AI Automation", "n8n"],
     "results": "Automated job discovery, 3× cover letter variations per listing, zero manual drafting",
     "image": "online-jobs-workflow.png",
-    "gallery": ["online-jobs-workflow.png", "online-jobs-site.png", "online-jobs-slack.png", "online-jobs-coverletter.png"],
+    "gallery": ["online-jobs-workflow.png", "", "online-jobs-site.png", "online-jobs-slack.png", "online-jobs-coverletter.png"],
     "href": "#"
   }
 ]

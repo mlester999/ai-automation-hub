@@ -391,7 +391,7 @@ const projects = [
     categories: ["AI Automation", "n8n"],
     href: "#",
     image: onlineJobsWorkflowImg,
-    gallery: [onlineJobsWorkflowImg, onlineJobsSiteImg, onlineJobsSlackImg, onlineJobsCoverletterImg],
+    gallery: [onlineJobsWorkflowImg, "/placeholder.svg", onlineJobsSiteImg, onlineJobsSlackImg, onlineJobsCoverletterImg],
   },
 ];
 
