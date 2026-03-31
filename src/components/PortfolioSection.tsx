@@ -69,6 +69,10 @@ import onlineJobsWorkflowImg from "@/assets/online-jobs-workflow.png";
 import onlineJobsSiteImg from "@/assets/online-jobs-site.png";
 import onlineJobsSlackImg from "@/assets/online-jobs-slack.png";
 import onlineJobsCoverletterImg from "@/assets/online-jobs-coverletter.png";
+import ytHookWorkflowImg from "@/assets/yt-hook-workflow.png";
+import ytHookEmailImg from "@/assets/yt-hook-email.png";
+import ytHookTypeformImg from "@/assets/yt-hook-typeform.png";
+import ytHookSheetsImg from "@/assets/yt-hook-sheets.png";
 
 const projects = [
   {
