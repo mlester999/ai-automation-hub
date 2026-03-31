@@ -379,6 +379,20 @@ const projects = [
     image: linkedinWorkflowImg,
     gallery: [linkedinWorkflowImg, "/placeholder.svg", linkedinSlackImg, linkedinPostsImg, linkedinSheetsImg],
   },
+  {
+    id: 23,
+    title: "Online Jobs PH Job Scraper — Automated Job Discovery & AI Cover Letter Generator",
+    description:
+      "Built a comprehensive n8n automation that scrapes job listings from OnlineJobs.ph, filters relevant opportunities, and automatically generates three tailored cover letter variations for each post — optimized for different tones and approaches. The workflow fetches context from the connected portfolio website and a Google Drive–hosted resume to craft personalized, data-driven applications. Matched jobs and generated cover letters are delivered instantly via Slack notifications for rapid review and submission.",
+    problem: "Time-consuming manual job searching and repetitive cover letter writing",
+    tools: ["n8n", "Slack", "Google Gemini", "Google Sheets", "Google Drive"],
+    results: "Automated job discovery, 3× cover letter variations per listing, zero manual drafting",
+    icon: Zap,
+    categories: ["AI Automation", "n8n"],
+    href: "#",
+    image: onlineJobsWorkflowImg,
+    gallery: [onlineJobsWorkflowImg, onlineJobsSiteImg, onlineJobsSlackImg, onlineJobsCoverletterImg],
+  },
 ];
 
 const categories = ["All", "AI Agents", "Workflow", "AI Automation", "Integration", "n8n", "Make.com", "Zapier", "GoHighLevel"];

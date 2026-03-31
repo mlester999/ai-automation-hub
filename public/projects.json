@@ -240,5 +240,16 @@
     "image": "linkedin-workflow.png",
     "gallery": ["linkedin-workflow.png", "", "linkedin-slack.png", "linkedin-posts.jpeg", "linkedin-sheets.png"],
     "href": "#"
+  },
+  {
+    "id": 23,
+    "title": "Online Jobs PH Job Scraper — Automated Job Discovery & AI Cover Letter Generator",
+    "desc": "Built a comprehensive n8n automation that scrapes job listings from OnlineJobs.ph, filters relevant opportunities, and automatically generates three tailored cover letter variations for each post — optimized for different tones and approaches. The workflow fetches context from the connected portfolio website and a Google Drive–hosted resume to craft personalized, data-driven applications. Matched jobs and generated cover letters are delivered instantly via Slack notifications for rapid review and submission.",
+    "tools": ["n8n", "Slack", "Google Gemini", "Google Sheets", "Google Drive"],
+    "cats": ["AI Automation", "n8n"],
+    "results": "Automated job discovery, 3× cover letter variations per listing, zero manual drafting",
+    "image": "online-jobs-workflow.png",
+    "gallery": ["online-jobs-workflow.png", "online-jobs-site.png", "online-jobs-slack.png", "online-jobs-coverletter.png"],
+    "href": "#"
   }
 ]
