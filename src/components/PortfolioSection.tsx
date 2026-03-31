@@ -61,6 +61,10 @@ import mitchayHaulsWebsiteImg from "@/assets/mitchay-hauls-website.png";
 import mitchayHauls1Img from "@/assets/mitchay-hauls-1.png";
 import mitchayHauls2Img from "@/assets/mitchay-hauls-2.png";
 import mitchayHauls3Img from "@/assets/mitchay-hauls-3.png";
+import linkedinWorkflowImg from "@/assets/linkedin-workflow.png";
+import linkedinSlackImg from "@/assets/linkedin-slack.png";
+import linkedinPostsImg from "@/assets/linkedin-posts.jpeg";
+import linkedinSheetsImg from "@/assets/linkedin-sheets.png";
 
 const projects = [
   {
