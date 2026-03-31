@@ -361,6 +361,20 @@ const projects = [
     image: mitchayHauls1Img,
     gallery: [mitchayHaulsWebsiteImg, mitchayHaulsMainImg, mitchayHauls1Img, mitchayHauls2Img, mitchayHauls3Img],
   },
+  {
+    id: 22,
+    title: "AI LinkedIn Content Publishing — Automated Approval & Posting via Slack",
+    description:
+      "Built an end-to-end n8n automation that transforms AI-generated content into fully reviewed and approved LinkedIn posts — eliminating the usual back-and-forth between content creation and publishing. The system generates portfolio-ready LinkedIn posts with AI, routes them to a Slack channel for real-time approval with Approve, Reject, and Edit buttons, tracks all content in a Google Sheets database with status, images, and metadata, and automatically publishes approved posts to LinkedIn with multi-image carousel support.",
+    problem: "Manual content review and publishing workflow causing delays and inconsistency in LinkedIn posting",
+    tools: ["n8n", "Slack", "Google Sheets", "LinkedIn", "OpenAI"],
+    results: "Zero-touch publishing after approval, real-time Slack-based review, full content audit trail",
+    icon: Zap,
+    categories: ["AI Automation", "n8n"],
+    href: "#",
+    image: linkedinWorkflowImg,
+    gallery: [linkedinWorkflowImg, "/placeholder.svg", linkedinSlackImg, linkedinPostsImg, linkedinSheetsImg],
+  },
 ];
 
 const categories = ["All", "AI Agents", "Workflow", "AI Automation", "Integration", "n8n", "Make.com", "Zapier", "GoHighLevel"];
